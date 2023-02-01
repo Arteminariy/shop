@@ -58,7 +58,7 @@ Product.belongsTo(Brand)
 Product.hasMany(BasketProduct)
 BasketProduct.belongsTo(Product)
 
-Product.hasMany(ProductDescription)
+Product.hasMany(ProductDescription, {as: 'description'})
 ProductDescription.belongsTo(Product)
 
 Type.belongsToMany(Brand, {through: TypeBrand})
