@@ -1,5 +1,6 @@
 /* eslint-disable */
 import TemplateName from './TemplateName';
+import React from 'react';
 
 export default {
   title: "TemplateName",
