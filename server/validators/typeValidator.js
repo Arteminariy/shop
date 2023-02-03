@@ -1,5 +1,5 @@
-const ApiError = require("../../error/ApiError")
-const { Type } = require("../../models/models")
+const ApiError = require("../error/ApiError")
+const { Type } = require("../models/models")
 
 module.exports = function(req, res, next) {
     try {

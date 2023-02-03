@@ -5,7 +5,7 @@ class brandController {
         try {
             const { name } = req.body
 
-            if(name) {
+            if (name) {
                 const brand = await Brand.create({ name })
                 return next(res.status(201).json(brand))
             }

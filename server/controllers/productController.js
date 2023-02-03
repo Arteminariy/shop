@@ -1,7 +1,6 @@
 const uuid = require('uuid')
 const path = require('path')
 const { Product, ProductDescription } = require('../models/models')
-const { nextTick } = require('process')
 const ApiError = require('../error/ApiError')
 
 class productController {
@@ -25,7 +24,7 @@ class productController {
                 );
             }
 
-            return res.json(product)
+            return res.json(product + `♿️`)
         } catch (error) {
             next(ApiError.badRequest(error.message))
         }
@@ -56,7 +55,7 @@ class productController {
             where: { id },
             include: [{ model: ProductDescription, as: 'description' }]
         })
-        return res.json(product)
+        return res.json(product + `♿️`)
     }
     async update(req, res, next) {
         try {
@@ -65,7 +64,7 @@ class productController {
             const product = await Product.findOne({ where: { id: id } })
             if (product && name && price && brandId && typeId && description) {
                 await Product.update({ name, price, brandId, typeId, description }, { where: { id: id } })
-                return res.json({message: 'Товар изменён'})
+                return res.json({message: 'Товар(♿️) изменён'})
             }
             if(!product) {
                 return next(ApiError.badRequest(error.message))
@@ -84,7 +83,7 @@ class productController {
             if (product) {
                 await Product.destroy({ where: { id: id } })
                 res.json({
-                    message: `Уволен id:${id}`
+                    message: `Уволен ♿️ с id:${id}`
                 })
             }
             else {
