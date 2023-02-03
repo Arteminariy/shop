@@ -16,12 +16,12 @@ class productController {
 
             if (description) {
                 description = JSON.parse(description)
-                description.array.forEach(i => 
+                description.array.forEach(i =>
                     ProductDescription.create({
                         title: i.title,
                         description: i.description,
                         productId: product.id
-                    })    
+                    })
                 );
             }
 
@@ -51,12 +51,48 @@ class productController {
         return res.json(products)
     }
     async getOne(req, res) {
-        const {id} = req.params
+        const { id } = req.params
         const product = await Product.findOne({
-            where: {id},
-            include: [{model: ProductDescription, as: 'description'}]
+            where: { id },
+            include: [{ model: ProductDescription, as: 'description' }]
         })
         return res.json(product)
+    }
+    async update(req, res, next) {
+        try {
+            let { name, price, brandId, typeId, description } = req.body
+            const { id } = req.params
+            const product = await Product.findOne({ where: { id: id } })
+            if (product && name && price && brandId && typeId && description) {
+                await Product.update({ name, price, brandId, typeId, description }, { where: { id: id } })
+                return res.json({message: 'Товар изменён'})
+            }
+            if(!product) {
+                return next(ApiError.badRequest(error.message))
+            }
+            if(!(name && price && brandId && typeId && description)) {
+                return next(ApiError.badRequest(error.message))
+            }
+        } catch (error) {
+            next(ApiError.internal(error.message))
+        }
+    }
+    async remove(req, res, next) {
+        try {
+            const { id } = req.params
+            const product = await Product.findOne({ where: { id: id } })
+            if (product) {
+                await Product.destroy({ where: { id: id } })
+                res.json({
+                    message: `Уволен id:${id}`
+                })
+            }
+            else {
+                next(ApiError.notFound(error.message))
+            }
+        } catch (error) {
+            next(ApiError.internal(error.message))
+        }
     }
 }
 
