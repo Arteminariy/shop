@@ -23,7 +23,6 @@ class productController {
                     })
                 );
             }
-
             return res.json(product + `♿️`)
         } catch (error) {
             next(ApiError.badRequest(error.message))
@@ -55,7 +54,7 @@ class productController {
             where: { id },
             include: [{ model: ProductDescription, as: 'description' }]
         })
-        return res.json(product + `♿️`)
+        return res.json(product)
     }
     async update(req, res, next) {
         try {
