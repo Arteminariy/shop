@@ -23,7 +23,7 @@ class productController {
                     })
                 );
             }
-            return res.json(product + `♿️`)
+            return res.json(JSON.stringify(product) + `♿️`)
         } catch (error) {
             next(ApiError.badRequest(error.message))
         }
@@ -50,6 +50,7 @@ class productController {
     }
     async getOne(req, res) {
         const { id } = req.params
+        console.log(req.params)
         const product = await Product.findOne({
             where: { id },
             include: [{ model: ProductDescription, as: 'description' }]
@@ -63,12 +64,12 @@ class productController {
             const product = await Product.findOne({ where: { id: id } })
             if (product && name && price && brandId && typeId && description) {
                 await Product.update({ name, price, brandId, typeId, description }, { where: { id: id } })
-                return res.json({message: 'Товар(♿️) изменён'})
+                return res.json({ message: 'Товар(♿️) изменён' })
             }
-            if(!product) {
+            if (!product) {
                 return next(ApiError.badRequest(error.message))
             }
-            if(!(name && price && brandId && typeId && description)) {
+            if (!(name && price && brandId && typeId && description)) {
                 return next(ApiError.badRequest(error.message))
             }
         } catch (error) {
