@@ -44,5 +44,8 @@
   },
   "devDependencies": {
     "generate-react-cli": "^8.2.0"
+  },
+  "devDependencies": {
+    "generate-react-cli": "^8.2.0"
   }
 }
