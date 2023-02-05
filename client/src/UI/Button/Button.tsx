@@ -11,9 +11,9 @@ export enum ButtonStyleVariant {
 }
 
 const Button: FC<IButtonProps> = ({ children, variant }) => (
-	<div className={variant === ButtonStyleVariant.outlined ? 'button outlined-btn' : 'button filled-btn'} data-testid="Button">
+	<button className={variant === ButtonStyleVariant.outlined ? 'button outlined-btn' : 'button filled-btn'} data-testid="Button">
 		{children}
-	</div>
+	</button>
 );
 
 export default Button;
