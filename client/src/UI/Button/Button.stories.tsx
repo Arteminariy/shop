@@ -3,6 +3,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button, { IButtonProps } from './Button';
 import './Button.css'
+import '../../index.css'
 
 export default {
 	title: 'Button',

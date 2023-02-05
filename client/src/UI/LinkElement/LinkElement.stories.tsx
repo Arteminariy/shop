@@ -2,6 +2,7 @@
 import LinkElement, {ILinkElementProps} from './LinkElement';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import './LinkElement.css'
+import '../../index.css'
 
 export default {
 	title: 'LinkElement',
