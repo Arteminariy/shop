@@ -1,1 +1,16 @@
-.Button {}
+.button {
+    width: fit-content;
+    font-size: 30px;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 5px 10px;
+}
+.outlined-btn {
+    color: #fff;
+    background-color: #000;
+}
+.filled-btn {
+    color: #000;
+    background-color: #fff;
+}
