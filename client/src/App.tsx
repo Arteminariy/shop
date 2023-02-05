@@ -6,7 +6,6 @@ function App() {
 	return (
 		<div className="App">
 			<MainPage/>
-			<Button variant={ButtonStyleVariant.outlined}>Some text</Button>
 		</div>
 	);
 }
