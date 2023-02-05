@@ -5,13 +5,10 @@ export interface IButtonProps {
 	children: JSX.Element | string,
 	variant: ButtonStyleVariant;
 }
-export enum ButtonStyleVariant {
-	filled,
-	outlined
-}
+export type ButtonStyleVariant = 'filled' | 'outlined'
 
 const Button: FC<IButtonProps> = ({ children, variant }) => (
-	<button className={variant === ButtonStyleVariant.outlined ? 'button outlined-btn' : 'button filled-btn'} data-testid="Button">
+	<button className={variant === 'outlined' ? 'button outlined-btn' : 'button filled-btn'} data-testid="Button">
 		{children}
 	</button>
 );

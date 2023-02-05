@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import "./TestPage.css"
 import Card from '../../UI/Card/Card';
 import Picture from '../../UI/Picture/Picture';
-import Button, { ButtonStyleVariant } from '../../UI/Button/Button';
+import Button from '../../UI/Button/Button';
 
 export interface ITestPageProps {
 
@@ -31,10 +31,10 @@ const TestPage: FC<ITestPageProps> = () => (
                     width={300}
                 />
                 <p>Залупа</p>
-                <Button variant={ButtonStyleVariant.outlined}>Что-то</Button>
+                <Button variant={'outlined'}>Что-то</Button>
             </>
         </Card>
-        <Button variant={ButtonStyleVariant.outlined}>Some text</Button>
+        <Button variant={'outlined'}>Some text</Button>
     </div>
 );
 
