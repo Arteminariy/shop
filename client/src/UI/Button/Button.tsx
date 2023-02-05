@@ -3,7 +3,7 @@ import './Button.css';
 
 export interface IButtonProps {
 	children: JSX.Element | string,
-	variant: ButtonStyleVariant;
+	variant: ButtonStyleVariant
 }
 export type ButtonStyleVariant = 'filled' | 'outlined'
 

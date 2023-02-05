@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import './Card.css';
 
 interface ICardProps {
-  children: JSX.Element,
+  children: JSX.Element | JSX.Element[],
 }
 
 const Card: FC<ICardProps> = ({children}) => (
