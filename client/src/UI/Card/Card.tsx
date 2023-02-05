@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import './Card.css';
 
-interface ICardProps {
-  children: JSX.Element,
+export interface ICardProps {
+  children: JSX.Element | JSX.Element[] | string,
 }
 
 const Card: FC<ICardProps> = ({children}) => (
