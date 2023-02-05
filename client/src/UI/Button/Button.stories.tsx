@@ -1,12 +1,12 @@
 /* eslint-disable */
 import React from 'react';
-import Button from './Button';
+import Button, { ButtonStyleVariant } from './Button';
 
 export default {
   title: "Button",
 };
 
-export const Default = () => <Button />;
+export const Default = () => <Button variant={ButtonStyleVariant.filled}>Default text</Button>;
 
 Default.story = {
   name: 'default',
