@@ -50,7 +50,6 @@ class productController {
     }
     async getOne(req, res) {
         const { id } = req.params
-        console.log(req.params)
         const product = await Product.findOne({
             where: { id },
             include: [{ model: ProductDescription, as: 'description' }]
