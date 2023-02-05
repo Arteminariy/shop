@@ -5,7 +5,7 @@ export default {
   title: "Picture",
 };
 
-export const Default = () => <Picture link={""}/>;
+export const Default = () => <Picture link={""} preview={true}/>;
 
 Default.story = {
   name: 'default',
