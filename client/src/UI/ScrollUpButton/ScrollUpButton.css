@@ -1,0 +1,14 @@
+#scrollUp {
+    position: fixed;
+    width: 40px;
+    right: 60px;
+    bottom: 80px;
+    height: 40px;
+    font-size: 3rem;
+    z-index: 1;
+    cursor: pointer;
+    color: rgb(26, 26, 26);
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 10px #fff;
+}
