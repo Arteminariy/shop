@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import Card from '../../UI/Card/Card';
 import Picture from '../../UI/Picture/Picture';
+import Button, { ButtonStyleVariant } from '../../UI/Button/Button';
+import TestPage from '../TestPage/TextPage';
 
 export interface IMainPageProps {
 
@@ -8,19 +10,7 @@ export interface IMainPageProps {
 
 const MainPage: FC<IMainPageProps> = () => (
     <div className="mainPage">
-        <Picture
-            preview={true}
-            link={"https://sun9-82.userapi.com/impg/fnoksh9YPz3VnKAVdYBWdLZI-QnIExVJJr64Sw/GRFMFFATm3U.jpg?size=1600x999&quality=95&sign=cdad5fc6706bf220821b68a5beb0ecae&type=album"}
-            width={200}
-        />
-        <Card
-            text="Залупа" 
-            picture='https://sun9-82.userapi.com/impg/fnoksh9YPz3VnKAVdYBWdLZI-QnIExVJJr64Sw/GRFMFFATm3U.jpg?size=1600x999&quality=95&sign=cdad5fc6706bf220821b68a5beb0ecae&type=album'
-            height={300}
-            backgrondColor="#fff"
-            borderColor='#000'
-            borderWidth={3}
-        />
+        <TestPage/>
     </div>
 );
 
