@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Link from './Link';
+import LinkElement from './LinkElement';
 
-describe('<Link />', () => {
+describe('<LinkElement />', () => {
   test('it should mount', () => {
-    render(<Link />);
+    render(<LinkElement link=""> </LinkElement>);
     
-    const link = screen.getByTestId('Link');
+    const link = screen.getByTestId('LinkElement');
 
     expect(link).toBeInTheDocument();
   });

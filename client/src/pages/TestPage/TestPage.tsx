@@ -4,6 +4,7 @@ import Card from '../../UI/Card/Card';
 import Picture from '../../UI/Picture/Picture';
 import Button from '../../UI/Button/Button';
 import Contacts from '../../components/Contacts/Contacts';
+import LinkElement from '../../UI/Link/LinkElement';
 
 export interface ITestPageProps { }
 
@@ -35,6 +36,9 @@ const TestPage: FC<ITestPageProps> = () => (
         <Contacts>
             Contact us!
         </Contacts>
+        <LinkElement link="">
+            Не может быть...
+        </LinkElement>
     </div>
 );
 

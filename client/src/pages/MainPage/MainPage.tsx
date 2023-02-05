@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import TestPage from '../TestPage/TextPage';
+import TestPage from '../TestPage/TestPage';
 
 export interface IMainPageProps {
 
