@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import Picture from '../Picture/Picture';
 import './Card.css';
 
 interface ICardProps {
