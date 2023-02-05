@@ -3,6 +3,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Card, { ICardProps } from './Card';
 import './Card.css'
+import '../../index.css'
 
 export default {
 	title: 'Card',
