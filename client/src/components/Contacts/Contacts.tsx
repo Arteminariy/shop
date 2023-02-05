@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import LinkElement from '../../UI/LinkElement/LinkElement';
 import {
     TwitterOutlined,
     FacebookFilled,
@@ -17,13 +18,26 @@ export interface IContactsProps {
 const Contacts: FC<IContactsProps> = ({ children }) => (
     <div className="contacts" data-testid="Contacts">
         {children}
-        <TwitterOutlined />
-        <FacebookOutlined />
-        <WhatsAppOutlined />
-        <MailOutlined />
-        <TwitterSquareFilled />
-        <FacebookFilled />
-        <MailFilled />
+        <LinkElement link="">
+            <TwitterOutlined />
+        </LinkElement>
+        <LinkElement link="">
+            <FacebookOutlined />
+        </LinkElement>
+        <LinkElement link="">
+            <WhatsAppOutlined />
+        </LinkElement>
+        <LinkElement link=""><MailOutlined />
+        </LinkElement>
+        <LinkElement link="">
+            <TwitterSquareFilled />
+        </LinkElement>
+        <LinkElement link="">
+            <FacebookFilled />
+        </LinkElement>
+        <LinkElement link="">
+            <MailFilled />
+        </LinkElement>
     </div>
 );
 
