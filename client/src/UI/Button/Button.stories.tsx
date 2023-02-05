@@ -1,14 +1,19 @@
-/* eslint-disable */
+// Button.stories.ts|tsx
+
 import React from 'react';
-import Button, { ButtonStyleVariant } from './Button';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Button, { IButtonProps } from './Button';
+import './Button.css'
 
 export default {
-  title: "Button",
-  component: Button
-};
+	title: 'Button',
+	component: Button,
+} as ComponentMeta<typeof Button>;
 
-export const Default = () => <Button variant={'filled'}>Default text</Button>;
+const Template: ComponentStory<typeof Button> = (args: IButtonProps) => <Button {...args} />;
 
-Default.story = {
-  name: 'default',
+export const Default = Template.bind({});
+
+Default.args = {
+	variant: 'outlined',
 };
