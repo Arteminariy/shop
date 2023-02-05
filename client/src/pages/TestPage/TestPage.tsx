@@ -4,7 +4,7 @@ import Card from '../../UI/Card/Card';
 import Picture from '../../UI/Picture/Picture';
 import Button from '../../UI/Button/Button';
 import Contacts from '../../components/Contacts/Contacts';
-import LinkElement from '../../UI/Link/LinkElement';
+import LinkElement from '../../UI/LinkElement/LinkElement';
 
 export interface ITestPageProps { }
 
