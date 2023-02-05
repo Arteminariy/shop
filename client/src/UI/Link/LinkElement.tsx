@@ -2,16 +2,17 @@ import React, { FC } from 'react';
 import './LinkElement.css';
 
 export interface ILinkElementProps {
-    link: string
-    children: string
+    link: string,
+    children: string | JSX.Element,
 }
 
 const LinkElement: FC<ILinkElementProps> = ({ link, children }) => (
     <a
         href={link}
+        className="linkElement"
     >
         <div
-            className="link"
+            
             data-testid="LinkElement"
         >
             {children}
