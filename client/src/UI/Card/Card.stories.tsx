@@ -2,7 +2,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Card, { ICardProps } from './Card';
-import './Button.css'
+import './Card.css'
 
 export default {
 	title: 'Card',
