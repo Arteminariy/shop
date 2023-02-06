@@ -1,7 +1,7 @@
 // RegistratioForm.stories.ts|tsx
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import RegistratioForm, { IRegistratioFormProps } from './RegistrationForm';
+import RegistratioForm, { IRegistrationFormProps } from './RegistrationForm';
 import './RegistratioForm.css'
 import '../../index.css'
 
@@ -10,7 +10,7 @@ export default {
 	component: RegistratioForm,
 } as ComponentMeta<typeof RegistratioForm>;
 
-const Template: ComponentStory<typeof RegistratioForm> = (args: IRegistratioFormProps) => <RegistratioForm {...args} />;
+const Template: ComponentStory<typeof RegistratioForm> = (args: IRegistrationFormProps) => <RegistratioForm {...args} />;
 
 export const Default = Template.bind({});
 
