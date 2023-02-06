@@ -7,8 +7,8 @@
 		"default": {
 			"customTemplates": {
 				"component": "templates/default/TemplateName.tsx",
-				"story": "templates/default/TemplateName.story.tsx",
-				"style": "templates/default/TemplateName.style.scss"
+				"story": "templates/default/TemplateName.stories.tsx",
+				"style": "templates/default/TemplateName.css"
 			},
 			"path": "src/UI",
 			"withStyle": true,

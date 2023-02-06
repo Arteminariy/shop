@@ -30,8 +30,8 @@ const ScrollUpButton = () => {
 			id='scrollUp'
 			onClick={scrollToTop}
 			style={{
-				// display: visible ? 'block' : 'none'
-				display: 'block'
+				display: visible ? 'block' : 'none'
+				// display: 'block'
 			}}
 		/>
 	);
