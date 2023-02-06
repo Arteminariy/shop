@@ -15,5 +15,6 @@ const Template: ComponentStory<typeof Card> = (args: ICardProps) => <Card {...ar
 export const Default = Template.bind({});
 
 Default.args = {
-	children: 'Default text'
+	children: 'Default text',
+	size: {x: 200, y: 200}
 };
