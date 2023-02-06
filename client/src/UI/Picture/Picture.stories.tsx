@@ -16,7 +16,7 @@ const Template: ComponentStory<typeof Picture> = (args: IPictureProps) => <Pictu
 export const Default = Template.bind({});
 
 Default.args = {
-  link: picture,
-  width: 800,
-  preview: false
+	link: picture,
+	width: 800,
+	preview: false
 };

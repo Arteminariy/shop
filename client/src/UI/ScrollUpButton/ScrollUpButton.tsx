@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ScrollUpButton.css';
-import {UpOutlined} from '@ant-design/icons'
+import {UpCircleOutlined} from '@ant-design/icons'
 
 const ScrollUpButton = () => {
 
@@ -26,7 +26,7 @@ const ScrollUpButton = () => {
 	window.addEventListener('scroll', toggleVisible);
 
 	return (
-		<UpOutlined
+		<UpCircleOutlined
 			id='scrollUp'
 			onClick={scrollToTop}
 			style={{
