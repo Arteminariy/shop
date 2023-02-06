@@ -10,7 +10,7 @@ export interface IRegistratioFormProps {
 
 const RegistratioForm: FC<IRegistratioFormProps> = ({}) => {
 	return (
-		<div className='registratio-form'>
+		<div className='registratioт-form'>
 			<Input placeholder='Login'></Input>
 			<Input placeholder='Password' type='password'></Input>
 			<Button variant='outlined'>Войти</Button>

@@ -1,7 +1,7 @@
 // RegistratioForm.stories.ts|tsx
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import RegistratioForm, { IRegistratioFormProps } from './RegistratioForm';
+import RegistratioForm, { IRegistratioFormProps } from './RegistrationForm';
 import './RegistratioForm.css'
 import '../../index.css'
 
