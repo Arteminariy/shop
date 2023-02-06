@@ -7,7 +7,7 @@ import Contacts from '../../components/Contacts/Contacts';
 import LinkElement from '../../UI/LinkElement/LinkElement';
 import Accordion from '../../UI/Accordion/Accordion';
 import ScrollUpButton from '../../UI/ScrollUpButton/ScrollUpButton';
-import RegistratioForm from '../../components/RegistratioForm/RegistrationForm';
+import RegistratioForm from '../../components/RegistrationForm/RegistrationForm';
 
 export interface ITestPageProps { }
 
