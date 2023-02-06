@@ -1,4 +1,4 @@
-// Button.stories.ts|tsx
+// Card.stories.ts|tsx
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Card, { ICardProps } from './Card';
