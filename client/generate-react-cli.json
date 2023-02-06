@@ -1,15 +1,20 @@
 {
-  "usesTypeScript": true,
-  "usesCssModule": false,
-  "cssPreprocessor": "css",
-  "testLibrary": "Testing Library",
-  "component": {
-    "default": {
-      "path": "src/UI",
-      "withStyle": true,
-      "withTest": true,
-      "withStory": true,
-      "withLazy": false
-    }
-  }
+	"usesTypeScript": true,
+	"usesCssModule": false,
+	"cssPreprocessor": "css",
+	"testLibrary": "Testing Library",
+	"component": {
+		"default": {
+			"customTemplates": {
+				"component": "templates/default/TemplateName.tsx",
+				"story": "templates/default/TemplateName.story.tsx",
+				"style": "templates/default/TemplateName.style.scss"
+			},
+			"path": "src/UI",
+			"withStyle": true,
+			"withTest": false,
+			"withStory": true,
+			"withLazy": false
+		}
+	}
 }

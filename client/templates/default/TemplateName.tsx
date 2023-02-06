@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './TemplateName.module.css';
 
-interface TemplateNameProps { }
+export interface ITemplateNameProps { }
 
-const TemplateName = ({ }: TemplateNameProps) => (
-	<div className='templateName'>
+const TemplateName: FC<ITemplateNameProps> = ({ }) => (
+	<div className='template-name'>
 		TemplateName Component
 	</div>
 );

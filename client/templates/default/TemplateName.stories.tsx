@@ -1,13 +1,17 @@
-/* eslint-disable */
-import TemplateName from './TemplateName';
+// TemplateName.stories.ts|tsx
 import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import TemplateName, { ITemplateNameProps } from './TemplateName';
+import './TemplateName.css'
+import '../../index.css'
 
 export default {
-  title: "TemplateName",
-};
+	title: 'TemplateName',
+	component: TemplateName,
+} as ComponentMeta<typeof TemplateName>;
 
-export const Default = () => <TemplateName />;
+const Template: ComponentStory<typeof TemplateName> = (args: ITemplateNameProps) => <TemplateName {...args} />;
 
-Default.story = {
-  name: 'default',
-};
+export const Default = Template.bind({});
+
+Default.args = {};
