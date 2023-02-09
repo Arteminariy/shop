@@ -6,3 +6,9 @@
     flex-direction: row;
     align-items: center;
 }
+.contacts-link {
+    color: black;
+}
+.contacts-link:hover {
+    color: rgb(65, 65, 65);
+}

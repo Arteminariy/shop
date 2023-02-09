@@ -1,16 +1,32 @@
 import React, { FC } from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom'
 
-interface IHeaderProps {
-    children: JSX.Element,
+export interface IHeaderProps {
+	tabs: IHeaderTab[]
 }
 
-const Header: FC<IHeaderProps> = ({ children }) => (
-    <div
-        className="header"
-    >
-        {children}
-    </div>
-);
+export interface IHeaderTab {
+	title: string,
+	link: string
+}
+
+const Header: FC<IHeaderProps> = ({ tabs }) => {
+	return (
+		<header>
+			<div className="header-content">
+				{tabs.map(tab => {
+					return (
+						<div className="header-tab">
+							<Link to={tab.link} className="header-tab-text">
+								{tab.title}
+							</Link>
+						</div>
+					)
+				})}
+			</div>
+		</header>
+	)
+};
 
 export default Header;

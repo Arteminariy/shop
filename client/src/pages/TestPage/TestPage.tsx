@@ -4,8 +4,6 @@ import Card from '../../UI/Card/Card';
 import Picture from '../../UI/Picture/Picture';
 import Button from '../../UI/Button/Button';
 import Contacts from '../../components/Contacts/Contacts';
-import LinkElement from '../../UI/LinkElement/LinkElement';
-import Accordion from '../../UI/Accordion/Accordion';
 import ScrollUpButton from '../../UI/ScrollUpButton/ScrollUpButton';
 import RegistratioForm from '../../components/RegistrationForm/RegistrationForm';
 
@@ -43,12 +41,6 @@ const TestPage: FC<ITestPageProps> = () => (
         <Contacts>
             Contact us!
         </Contacts>
-        {/*ССЫЛКА*/}
-        <LinkElement link="">
-            Не может быть...
-        </LinkElement>
-        {/*ГАРМОШКА-РАСКЛАДУШКА*/}
-        <Accordion content={[{header: '1', text: '1'}, {header: '2', text: '2'}, {header: '3', text: '3'}]}/>
         <RegistratioForm/>
         <ScrollUpButton/>
     </div>

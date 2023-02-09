@@ -3,13 +3,13 @@ import React from 'react';
 import Layout from './Layout';
 
 export default {
-  title: "Layout",
+	title: "Layout",
 };
 
 export const Default = () => {
-  return(<Layout />)
+	return (<Layout><></></Layout>)
 };
 
 Default.story = {
-  name: 'default',
+	name: 'default',
 };
