@@ -9,7 +9,10 @@ export interface IButtonProps {
 export type ButtonStyleVariant = 'filled' | 'outlined'
 
 const Button: FC<IButtonProps> = ({ children, variant, click }) => (
-	<button onClick={click} className={variant === 'outlined' ? 'button outlined-btn' : 'button filled-btn'} data-testid="Button">
+	<button
+		onClick={click}
+		className={variant === 'outlined' ? 'button outlined-btn' : 'button filled-btn'}
+		data-testid="Button">
 		{children}
 	</button>
 );
