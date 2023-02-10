@@ -14,4 +14,39 @@ const Template: ComponentStory<typeof Footer> = (args: IFooterProps) => <Footer 
 
 export const Default = Template.bind({});
 
-Default.args = {};
+Default.args = {
+	tabs: [
+		{
+			tab: [
+				{ text: "Главная", link: "/" },
+				{ text: "1", link: "/" },
+				{ text: "a", link: "/" },
+				{ text: "а", link: "/" },
+			]
+		},
+		{
+			tab: [
+				{ text: "Каталог", link: "/catalogue" },
+				{ text: "2", link: "/" },
+				{ text: "b", link: "/" },
+				{ text: "б", link: "/" },
+			]
+		},
+		{
+			tab: [
+				{ text: "Акции", link: "/" },
+				{ text: "3", link: "/" },
+				{ text: "c", link: "/" },
+				{ text: "в", link: "/" },
+			]
+		},
+		{
+			tab: [
+				{ text: "Новинки", link: "/" },
+				{ text: "4", link: "/" },
+				{ text: "d", link: "/" },
+				{ text: "г", link: "/" },
+			]
+		},
+	]
+};

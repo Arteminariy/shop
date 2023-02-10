@@ -14,4 +14,9 @@ const Template: ComponentStory<typeof Header> = (args: IHeaderProps) => <Header 
 
 export const Default = Template.bind({});
 
-Default.args = {};
+Default.args = {
+	tabs: [
+		{ title: "Главная", link: "/" },
+		{ title: "Каталог", link: "/catalogue" },
+	]
+};
