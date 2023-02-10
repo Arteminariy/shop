@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import TestPage from './pages/TestPage/TestPage';
+import MainPage from './pages/MainPage/MainPage';
 import { Routes, Route} from 'react-router-dom'
 import Layout from './components/Layout/Layout';
 import CataloguePage from './pages/CataloguePage/CataloguePage';
@@ -10,7 +10,7 @@ function App() {
 		<div className="App">
 			<Routes>
 				<Route path='/' element={<Layout/>}>
-					<Route index element={<TestPage/>}/>
+					<Route index element={<MainPage/>}/>
 					<Route path='catalogue' element={<CataloguePage/>}/>
 				</Route>
 			</Routes>

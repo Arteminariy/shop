@@ -2,3 +2,8 @@
 .divider {
     margin: 12px 0;
 }
+.layout-container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+}
