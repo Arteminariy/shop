@@ -20,10 +20,6 @@ const Order = sequelize.define('order', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true}
 })
 
-const OrderProduct = sequelize.define('order_product', {
-    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true}
-})
-
 const Product = sequelize.define('product', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     name: {type: DataTypes.STRING, unique: true, allowNull: false},
@@ -51,6 +47,10 @@ const TypeBrand = sequelize.define('type_brand', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
 })
 
+const OrderProduct = sequelize.define('order_product', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+})
+
 User.hasOne(Basket)
 Basket.belongsTo(User)
 
@@ -69,6 +69,9 @@ Product.belongsTo(Type)
 Brand.hasMany(Product)
 Product.belongsTo(Brand)
 
+Product.hasMany(OrderProduct)
+OrderProduct.belongsTo(Product)
+
 Product.hasMany(BasketProduct)
 BasketProduct.belongsTo(Product)
 
@@ -78,14 +81,15 @@ ProductDescription.belongsTo(Product)
 Type.belongsToMany(Brand, {through: TypeBrand})
 Brand.belongsToMany(Type, {through: TypeBrand})
 
+
 module.exports = {
     User,
     Basket,
     BasketProduct,
     Order,
-    OrderProduct,
     Product,
     Type,
     Brand,
+    OrderProduct,
     ProductDescription
 }
