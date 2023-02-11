@@ -5,10 +5,10 @@ const router = new Router()
 
 router.get('/', authMiddleware, orderController.getOrders)
 router.get('/:id', authMiddleware, orderController.getOrder)
-router.post('/:id', authMiddleware, orderController.addToOrder)
 router.post('/', authMiddleware, orderController.createOrder)
-router.delete('/:id', authMiddleware, orderController.removeFromOrder)
+router.post('/:id', authMiddleware, orderController.addToOrder)
 router.delete('/', authMiddleware, orderController.clearOrder)
+router.delete('/:id', authMiddleware, orderController.removeFromOrder)
 
 
 module.exports = router

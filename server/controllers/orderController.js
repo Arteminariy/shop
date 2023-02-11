@@ -6,7 +6,7 @@ class OrderController {
         try {
             const { userId } = req.body
             
-            const order = await Order.findOne({
+            const order = await Order.findAll({
                 where: { userId: userId }
             })
             return res.status(200).json(order)
