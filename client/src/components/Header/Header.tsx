@@ -13,17 +13,14 @@ export interface IHeaderTab {
 }
 
 const Header: FC<IHeaderProps> = ({ tabs }) => {
+	const authorized = true
     return (
         <header>
             <div className="header-content">
                 <div className="header-top">
                     <div className="header-logo">Shine Bright</div>
                     <div className="header-buttons">
-                        <Link to="/">
-                            <div className="header-icon">
-                                <img src={user_icon} alt="Профиль" />
-                            </div>
-                        </Link>
+						{ authorized ? <Link to="/"><div className="header-icon"><img src={user_icon} alt="Профиль" /></div></Link> : <></>}
                     </div>
                 </div>
                 <div className="header-tabs">
