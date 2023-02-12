@@ -1,6 +1,6 @@
 const ApiError = require("../error/ApiError");
 const bcrypt = require("bcrypt");
-const { User, Basket, Order } = require("../models/models");
+const { User, Basket, Order, BasketProduct } = require("../models/models");
 const jwt = require("jsonwebtoken");
 
 const generateJWT = (id, login, role) => {
@@ -48,9 +48,9 @@ class userController {
 
         const user = await User.findOne({
             where: { id },
-            include: [{ model: Basket }],
+            include: [{ model: Basket, include: { model: BasketProduct} }, { model: Order }],
         });
-        return res.json({user})
+        return res.json({ user });
     }
 }
 
