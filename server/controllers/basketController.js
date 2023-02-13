@@ -1,4 +1,4 @@
-const { Basket, Product, BasketProduct, User } = require("../models/models");
+const { Basket, Product, BasketProduct } = require("../models/models");
 const ApiError = require("../error/ApiError");
 
 class BasketController {
