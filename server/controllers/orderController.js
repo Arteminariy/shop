@@ -2,15 +2,15 @@ const { Order, Product, OrderProduct, User } = require("../models/models");
 const ApiError = require("../error/ApiError");
 
 const checkUsersId = (id, orders) => {
-    let counter = 0
+    let counter = 0;
     for (let i = 0; i < orders.length; i++) {
         if (id === orders[i].dataValues.userId) {
-            counter++
+            counter++;
         }
     }
-    let Is = counter == orders.length
-    return Is
-}
+    let Is = counter == orders.length;
+    return Is;
+};
 
 class OrderController {
     async getOrders(req, res, next) {
@@ -21,7 +21,7 @@ class OrderController {
             const orders = await Order.findAll({
                 where: { userId: userId },
             });
-            
+
             if (checkUsersId(user.id, orders)) {
                 return res.status(200).json(orders);
             } else next(ApiError.forbidden(`Не свою коляску катишь, ♿️`));
@@ -38,12 +38,11 @@ class OrderController {
                 where: { id },
                 include: [{ model: OrderProduct }],
             });
-            if(order) {
+            if (order) {
                 if (user.id === order.userId) {
                     return res.status(200).json(order);
                 } else next(ApiError.forbidden(`Не свою коляску катишь, ♿️`));
-            }
-            else {
+            } else {
                 next(ApiError.badRequest(`Нет такого заказа: ${order}`));
             }
         } catch (error) {
@@ -59,7 +58,6 @@ class OrderController {
             const order = await Order.findOne({ where: { id: id } });
             const product = await Product.findOne({ where: { id: productId } });
 
-            
             if (user.id === order.userId) {
                 const order_product = OrderProduct.create({
                     orderId: id,
@@ -96,14 +94,12 @@ class OrderController {
 
             const product = await Product.findOne({ where: { id: productId } });
 
-            
             if (user.id === order.userId) {
                 const order_product = await OrderProduct.destroy({
                     where: { productId: product.id, orderId: order.id },
                 });
                 return res.json(JSON.stringify(order_product));
             } else next(ApiError.forbidden(`Не свою коляску катишь, ♿️`));
-            
         } catch (error) {
             next(ApiError.internal(error.message));
         }
@@ -111,14 +107,16 @@ class OrderController {
     async clearOrder(req, res, next) {
         try {
             const { orderId } = req.body;
+            const { user } = req;
 
             const order = await Order.findOne({ where: { id: orderId } });
 
-            const order_product = await OrderProduct.destroy({
-                where: { orderId: order.id },
-            });
-            console.log(`order_product: ` + JSON.stringify(order_product));
-            res.json(JSON.stringify(order_product));
+            if (user.id === order.userId) {
+                const order_product = await OrderProduct.destroy({
+                    where: { orderId: order.id },
+                });
+                res.json(JSON.stringify(order_product));
+            } else next(ApiError.forbidden(`Не свою коляску катишь, ♿️`));
         } catch (error) {
             next(ApiError.internal(error.message));
         }
