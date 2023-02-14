@@ -5,7 +5,7 @@ import Picture from "../../UI/Picture/Picture";
 import Button from "../../UI/Button/Button";
 import Contacts from "../../components/Contacts/Contacts";
 import ScrollUpButton from "../../UI/ScrollUpButton/ScrollUpButton";
-import RegistratioForm from "../../components/RegistrationForm/RegistrationForm";
+import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 
 export interface IMainPageProps {}
 
@@ -32,7 +32,7 @@ const MainPage: FC<IMainPageProps> = ({}) => {
             <Button variant="outlined">Some text</Button>
             {/*КОНТАКТЫ*/}
             <Contacts>Contact us!</Contacts>
-            <RegistratioForm />
+            <RegistrationForm />
             <ScrollUpButton />
         </div>
     );
