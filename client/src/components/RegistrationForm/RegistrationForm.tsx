@@ -18,4 +18,4 @@ const RegistrationForm: FC<IRegistrationFormProps> = ({}) => {
 	)
 };
 
-export default RegistratioForm;
+export default RegistrationForm;
