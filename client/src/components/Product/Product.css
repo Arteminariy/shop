@@ -4,9 +4,9 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    border: 2px solid #000;
     align-items: center;
     box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 .product-container > Button {
     margin: auto 0 0 0;
