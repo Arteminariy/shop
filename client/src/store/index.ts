@@ -2,9 +2,9 @@ import {configureStore} from '@reduxjs/toolkit'
 import registrationReducer from './RegistrationSlice'
 
 const store = configureStore({
-    reducer: {
-        registration: registrationReducer
-    }
+	reducer: {
+		registration: registrationReducer
+	}
 })
 
 export default store;

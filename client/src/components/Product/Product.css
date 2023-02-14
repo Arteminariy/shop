@@ -1,0 +1,18 @@
+.product-container {
+    width: 300px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.product-container > Button {
+    margin: auto 0 0 0;
+    width: 100%;
+}
+.product-img, .product-img > img {
+    width: 280px;
+    height: 280px;
+}

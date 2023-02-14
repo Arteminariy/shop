@@ -8,7 +8,7 @@ export interface IRegistrationFormProps {
 }
 
 
-const RegistratioForm: FC<IRegistrationFormProps> = ({}) => {
+const RegistrationForm: FC<IRegistrationFormProps> = ({}) => {
 	return (
 		<div className='registration-form'>
 			<Input placeholder='Login'></Input>
@@ -18,4 +18,4 @@ const RegistratioForm: FC<IRegistrationFormProps> = ({}) => {
 	)
 };
 
-export default RegistratioForm;
+export default RegistrationForm;

@@ -41,7 +41,7 @@
     "component": "npx generate-react-cli component",
     "sb": "start-storybook -p 6006 -s public",
     "build-sb": "build-storybook -s public",
-    "lint": "eslint -c .eslintrc --ext.js,.jsx,.ts,.tsx .",
+    "lint": "eslint -c .eslintrc --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "npm run lint -- --fix"
   },
   "browserslist": {
