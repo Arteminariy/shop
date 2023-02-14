@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import RegistratioForm from "../components/RegistrationForm/RegistrationForm";
+import { createSlice } from '@reduxjs/toolkit';
+import RegistratioForm from '../components/RegistrationForm/RegistrationForm';
 
 type RegistrationFormState = {
     login: string,
@@ -7,18 +7,18 @@ type RegistrationFormState = {
 }
 
 const initialState: RegistrationFormState = {
-    login: '',
-    password: ''
+	login: '',
+	password: ''
 }
 
 const RegistrationSlice = createSlice({
-    name: 'registrationForm',
-    initialState,
-    reducers: {
-        registration() {
+	name: 'registrationForm',
+	initialState,
+	reducers: {
+		registration() {
 
-        }
-    }
+		}
+	}
 })
 
 export const { registration } = RegistrationSlice.actions

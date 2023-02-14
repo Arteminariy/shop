@@ -16,7 +16,7 @@ export const Default = Template.bind({});
 
 Default.args = {
 	tabs: [
-		{ title: "Главная", link: "/" },
-		{ title: "Каталог", link: "/catalogue" },
+		{ title: 'Главная', link: '/' },
+		{ title: 'Каталог', link: '/catalogue' },
 	]
 };

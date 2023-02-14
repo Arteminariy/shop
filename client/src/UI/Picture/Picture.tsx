@@ -9,13 +9,13 @@ export interface IPictureProps {
 }
 
 const Picture: FC<IPictureProps> = ({link, width, preview}) => (
-    <div className="picture" data-testid="Picture">
-        <Image
-            preview={preview}
-            width={width}
-            src={link}
-        />
-    </div>
+	<div className='picture' data-testid='Picture'>
+		<Image
+			preview={preview}
+			width={width}
+			src={link}
+		/>
+	</div>
 );
 
 export default Picture;

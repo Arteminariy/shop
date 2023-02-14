@@ -12,15 +12,15 @@ export interface ICardSize {
 
 
 const Card: FC<ICardProps> = ({ children, size }) => (
-    <div
-        className="card"
-        style={{
-            width: size?.x,
-            height: size?.y
-        }}
-    >
-        {children}
-    </div>
+	<div
+		className='card'
+		style={{
+			width: size?.x,
+			height: size?.y
+		}}
+	>
+		{children}
+	</div>
 );
 
 export default Card;
