@@ -8,6 +8,7 @@ export interface ICataloguePageProps {}
 const CataloguePage: FC<ICataloguePageProps> = ({}) => {
 	const products: IProduct[] = [
 		{
+			id: 1,
 			name: 'Каловые массы',
 			price: 1000,
 			img: img1,
@@ -15,6 +16,7 @@ const CataloguePage: FC<ICataloguePageProps> = ({}) => {
 			brandName: 'brand',
 		},
 		{
+			id: 2,
 			name: 'Каловые массы',
 			price: 1000,
 			img: img1,
@@ -22,6 +24,7 @@ const CataloguePage: FC<ICataloguePageProps> = ({}) => {
 			brandName: 'brand',
 		},
 		{
+			id: 3,
 			name: 'Каловые массы',
 			price: 1000,
 			img: img1,
