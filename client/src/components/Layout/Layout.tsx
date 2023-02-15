@@ -19,42 +19,7 @@ const Layout: FC<ILayoutProps> = ({}) => (
 		<div className="layout-container">
 			<Outlet />
 		</div>
-		<Footer
-			tabs={[
-				{
-					tab: [
-						{ text: 'Главная', link: '/' },
-						{ text: '1', link: '/' },
-						{ text: 'a', link: '/' },
-						{ text: 'а', link: '/' },
-					]
-				},
-				{
-					tab: [
-						{ text: 'Каталог', link: '/catalogue' },
-						{ text: '2', link: '/' },
-						{ text: 'b', link: '/' },
-						{ text: 'б', link: '/' },
-					]
-				},
-				{
-					tab: [
-						{ text: 'Акции', link: '/' },
-						{ text: '3', link: '/' },
-						{ text: 'c', link: '/' },
-						{ text: 'в', link: '/' },
-					]
-				},
-				{
-					tab: [
-						{ text: 'Новинки', link: '/' },
-						{ text: '4', link: '/' },
-						{ text: 'd', link: '/' },
-						{ text: 'г', link: '/' },
-					]
-				},
-			]}
-		/>
+		<Footer/>
 	</>
 );
 
