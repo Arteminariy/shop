@@ -22,7 +22,10 @@
 	font-style: normal;
 	font-weight: 400;
 	font-size: 20px;
-	line-height: 28px;
 	letter-spacing: 0.02em;
 	color: #000000;
+}
+
+.product-card-name, .product-card-brand-name, .product-card-price {
+	margin: 5px 0;
 }

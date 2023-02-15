@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import './ProductPage.css';
 import img1 from '../../pictures/1.jpg';
 import Button from '../../UI/Button/Button';
+import Picture from '../../UI/Picture/Picture';
 
 export interface IProductPageProps {}
 
@@ -34,9 +35,10 @@ const ProductPage: FC<IProductPageProps> = () => {
 			{product && (
 				<>
 					<div className="product-content">
-						<div className="product-image">
+						{/* <div className="product-image">
 							<img src={`${process.env.REACT_APP_API_URL}/${product.img}`} alt={product.name} />
-						</div>
+						</div> */}
+						<Picture width={400} height={400} link={`${process.env.REACT_APP_API_URL}/${product.img}`}/>
 						<div className="product-content-text">
 							<h2 className="product-name">{product.name}</h2>
 							<p className="product-brand">{product.brand.name}</p>
