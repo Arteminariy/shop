@@ -5,7 +5,7 @@ import './CataloguePage.css';
 
 export interface ICataloguePageProps {}
 
-const CataloguePage: FC<ICataloguePageProps> = ({}) => {
+const CataloguePage: FC<ICataloguePageProps> = () => {
 	const products: IProduct[] = [
 		{
 			id: 1,

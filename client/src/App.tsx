@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import MainPage from './pages/MainPage/MainPage';
-import { Routes, Route, Router } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import CataloguePage from './pages/CataloguePage/CataloguePage';
 import ProductPage from './pages/ProductPage/ProductPage';
