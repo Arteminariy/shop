@@ -10,10 +10,10 @@ export interface IRegistrationFormProps {
 
 const RegistrationForm: FC<IRegistrationFormProps> = ({}) => {
 	return (
-		<div className='registration-form'>
-			<Input placeholder='Login'></Input>
-			<Input placeholder='Password' type='password'></Input>
-			<Button variant='outlined'>Войти</Button>
+		<div className="registration-form">
+			<Input placeholder="Login"></Input>
+			<Input placeholder="Password" type="password"></Input>
+			<Button variant="outlined">Войти</Button>
 		</div>
 	)
 };

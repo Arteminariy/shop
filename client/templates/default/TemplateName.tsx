@@ -5,7 +5,7 @@ export interface ITemplateNameProps { }
 
 const TemplateName: FC<ITemplateNameProps> = () => {
 	return (
-		<div className='template-name'>
+		<div className="template-name">
 			TemplateName Component
 		</div>
 	)

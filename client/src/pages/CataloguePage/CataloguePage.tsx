@@ -33,8 +33,8 @@ const CataloguePage: FC<ICataloguePageProps> = ({}) => {
 		},
 	];
 	return (
-		<div className='catalogue-page'>
-			<div className='products-container'>
+		<div className="catalogue-page">
+			<div className="products-container">
 				{products.map((product) => {
 					return <Product product={product} />;
 				})}

@@ -15,26 +15,26 @@ export interface IContactsProps {
 }
 
 const Contacts: FC<IContactsProps> = ({ children }) => (
-	<div className='contacts' data-testid='Contacts'>
+	<div className="contacts" data-testid="Contacts">
 		{children}
-		<a href='' className='contacts-link'>
+		<a href="" className="contacts-link">
 			<TwitterOutlined />
 		</a>
-		<a href='' className='contacts-link'>
+		<a href="" className="contacts-link">
 			<FacebookOutlined />
 		</a>
-		<a href='' className='contacts-link'>
+		<a href="" className="contacts-link">
 			<WhatsAppOutlined />
 		</a>
-		<a href='' className='contacts-link'><MailOutlined />
+		<a href="" className="contacts-link"><MailOutlined />
 		</a>
-		<a href='' className='contacts-link'>
+		<a href="" className="contacts-link">
 			<TwitterSquareFilled />
 		</a>
-		<a href='' className='contacts-link'>
+		<a href="" className="contacts-link">
 			<FacebookFilled />
 		</a>
-		<a href='' className='contacts-link'>
+		<a href="" className="contacts-link">
 			<MailFilled />
 		</a>
 	</div>

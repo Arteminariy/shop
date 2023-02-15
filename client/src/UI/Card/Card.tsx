@@ -13,7 +13,7 @@ export interface ICardSize {
 
 const Card: FC<ICardProps> = ({ children, size }) => (
 	<div
-		className='card'
+		className="card"
 		style={{
 			width: size?.x,
 			height: size?.y

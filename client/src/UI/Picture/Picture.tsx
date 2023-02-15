@@ -9,7 +9,7 @@ export interface IPictureProps {
 }
 
 const Picture: FC<IPictureProps> = ({link, width, preview}) => (
-	<div className='picture' data-testid='Picture'>
+	<div className="picture" data-testid="Picture">
 		<Image
 			preview={preview}
 			width={width}

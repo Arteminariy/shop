@@ -27,7 +27,7 @@ const ScrollUpButton = () => {
 
 	return (
 		<UpCircleOutlined
-			id='scrollUp'
+			id="scrollUp"
 			onClick={scrollToTop}
 			style={{
 				display: visible ? 'block' : 'none'

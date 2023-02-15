@@ -11,25 +11,25 @@ export interface IMainPageProps {}
 
 const MainPage: FC<IMainPageProps> = ({}) => {
 	return (
-		<div className='main-page'>
+		<div className="main-page">
 			{/*КАРТИНКА*/}
 			<Picture
 				preview={true}
-				link='https://sun9-82.userapi.com/impg/fnoksh9YPz3VnKAVdYBWdLZI-QnIExVJJr64Sw/GRFMFFATm3U.jpg?size=1600x999&quality=95&sign=cdad5fc6706bf220821b68a5beb0ecae&type=album'
+				link="https://sun9-82.userapi.com/impg/fnoksh9YPz3VnKAVdYBWdLZI-QnIExVJJr64Sw/GRFMFFATm3U.jpg?size=1600x999&quality=95&sign=cdad5fc6706bf220821b68a5beb0ecae&type=album"
 				width={300}
 			/>
 			{/*КАРТОЧКА*/}
 			<Card>
 				<Picture
 					preview={false}
-					link='https://sun9-82.userapi.com/impg/fnoksh9YPz3VnKAVdYBWdLZI-QnIExVJJr64Sw/GRFMFFATm3U.jpg?size=1600x999&quality=95&sign=cdad5fc6706bf220821b68a5beb0ecae&type=album'
+					link="https://sun9-82.userapi.com/impg/fnoksh9YPz3VnKAVdYBWdLZI-QnIExVJJr64Sw/GRFMFFATm3U.jpg?size=1600x999&quality=95&sign=cdad5fc6706bf220821b68a5beb0ecae&type=album"
 					width={300}
 				/>
 				<p>Залупа</p>
-				<Button variant='outlined'>Что-то</Button>
+				<Button variant="outlined">Что-то</Button>
 			</Card>
 			{/*КНОПКА*/}
-			<Button variant='outlined'>Some text</Button>
+			<Button variant="outlined">Some text</Button>
 			{/*КОНТАКТЫ*/}
 			<Contacts>Contact us!</Contacts>
 			<RegistrationForm />

@@ -18,7 +18,7 @@ export interface IFooterTab {
 const Footer: FC<IFooterProps> = ({ tabs }) => {
 	return (
 		<footer>
-			<div className='footer-content'>
+			<div className="footer-content">
 				<Row gutter={[16, 0]}>
 					{tabs.map((el) => {
 						return (
@@ -27,7 +27,7 @@ const Footer: FC<IFooterProps> = ({ tabs }) => {
 									return (
 										<Col span={6}>
 											<Link to={tabEl.link}>
-												<div className='footer-tab-text'>
+												<div className="footer-tab-text">
 													{tabEl.text}
 												</div>
 											</Link>

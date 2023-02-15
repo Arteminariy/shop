@@ -41,14 +41,15 @@ header {
 }
 .header-tab {
     padding: 10px;
-}
-
-.header-tab:hover {
-    background-color: #ededed;
-}
-
-.header-tab-text {
     font-size: 24px;
     text-decoration: none;
     color: #000;
+}
+
+.header-tab:hover {
+    background-color: #f4f4f4;
+}
+
+.active {
+    background-color: #dcdcdc;
 }

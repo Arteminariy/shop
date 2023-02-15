@@ -14,7 +14,7 @@ const Button: FC<IButtonProps> = ({ children, variant, click }) => (
 		className={
 			variant === 'outlined' ? 'button outlined-btn' : 'button filled-btn'
 		}
-		data-testid='Button'
+		data-testid="Button"
 	>
 		{children}
 	</button>

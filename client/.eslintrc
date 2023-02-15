@@ -6,7 +6,7 @@
     "rules": {
         "no-console": "warn",
         "quotes": ["error", "single"],
-        "jsx-quotes": ["error", "prefer-single"],
+        "jsx-quotes": ["error", "prefer-double"],
         "prefer-const": "error",
         "indent": ["error", "tab"]
     }

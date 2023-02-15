@@ -15,8 +15,8 @@ const Layout: FC<ILayoutProps> = ({}) => (
 				{ title: 'Каталог', link: '/catalogue' }
 			]}
 		/>
-		<Divider className='divider' />
-		<div className='layout-container'>
+		<Divider className="divider" />
+		<div className="layout-container">
 			<Outlet />
 		</div>
 		<Footer

@@ -9,7 +9,7 @@ export interface IInputProps {
 const Input: FC<IInputProps> = ({ placeholder, type }) => {
 	const [value, setvalue] = useState('');
 	return (
-		<input className='input' placeholder={placeholder} type={type}/>
+		<input className="input" placeholder={placeholder} type={type}/>
 	)
 };
 
