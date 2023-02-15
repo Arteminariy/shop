@@ -22,7 +22,6 @@ const ProductPage: FC<IProductPageProps> = () => {
 		fetch(`http://localhost:5000/api/product/${id}`)
 			.then((res) => res.json())
 			.then((data) => setProduct(data))
-			.then((data) => console.log('Запрос'));
 	}, [id]);
 	return (
 		<div className="product-page">
@@ -30,7 +29,7 @@ const ProductPage: FC<IProductPageProps> = () => {
 				<>
 					<div className="product-content">
 						<div className="product-image">
-							<img src={product.img} alt={product.name} />
+							<img src={`${process.env.REACT_APP_API_URL}/${product.img}`} alt={product.name} />
 						</div>
 						<div className="product-content-text">
 							<h2 className="product-name">{product.name}</h2>

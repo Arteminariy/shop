@@ -22,7 +22,7 @@ const Product: FC<IProductProps> = ({ product }) => {
 		<Link to={String(product.id)} style={{ textDecoration: 'none', color: '#000' }}>
 			<div className="product-container">
 				<div className="product-img">
-					<img src={product.img} alt={product.name} />
+					<img src={`${process.env.REACT_APP_API_URL}/${product.img}`} alt={product.name} />
 				</div>
 				<h3 className="product-brand-name">{product.brandName}</h3>
 				<p className="product-name">{product.name}</p>

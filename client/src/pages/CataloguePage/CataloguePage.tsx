@@ -11,7 +11,6 @@ const CataloguePage: FC<ICataloguePageProps> = () => {
 		fetch('http://localhost:5000/api/product')
 			.then(res => res.json())
 			.then(data => setProducts(data.rows))
-			.then(data => console.log('Запрос продуктов'))
 	})
 
 	return (
