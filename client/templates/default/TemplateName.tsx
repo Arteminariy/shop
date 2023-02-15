@@ -3,7 +3,7 @@ import './TemplateName.css';
 
 export interface ITemplateNameProps { }
 
-const TemplateName: FC<ITemplateNameProps> = ({ }) => {
+const TemplateName: FC<ITemplateNameProps> = () => {
 	return (
 		<div className='template-name'>
 			TemplateName Component

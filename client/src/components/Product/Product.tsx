@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../UI/Button/Button';
-import Card from '../../UI/Card/Card';
 import './Product.css';
 
 export interface IProductProps {
