@@ -11,14 +11,14 @@ const CataloguePage: FC<ICataloguePageProps> = () => {
 		fetch('http://localhost:5000/api/product')
 			.then(res => res.json())
 			.then(data => setProducts(data.rows))
-			.then(data => console.log('Запрос'))
+			.then(data => console.log('Запрос продуктов'))
 	})
 
 	return (
 		<div className="catalogue-page">
 			<div className="products-container">
-				{products.map((product) => {
-					return <Product product={product} />;
+				{products && products.map((product) => {
+					return <Product product={product} key={product} />;
 				})}
 			</div>
 		</div>
