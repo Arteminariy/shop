@@ -14,6 +14,7 @@ export interface IProduct {
     img: string;
     typeName: string;
     brandName: string;
+	description: string;
 }
 
 const Product: FC<IProductProps> = ({ product }) => {

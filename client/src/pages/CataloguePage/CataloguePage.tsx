@@ -1,37 +1,19 @@
-import React, { FC } from 'react';
-import Product, { IProduct } from '../../components/Product/Product';
-import img1 from '../../pictures/1.jpg';
+import React, { FC, useEffect, useState } from 'react';
+import Product from '../../components/Product/Product';
 import './CataloguePage.css';
 
 export interface ICataloguePageProps {}
 
 const CataloguePage: FC<ICataloguePageProps> = () => {
-	const products: IProduct[] = [
-		{
-			id: 1,
-			name: 'Каловые массы',
-			price: 1000,
-			img: img1,
-			typeName: 'type',
-			brandName: 'brand',
-		},
-		{
-			id: 2,
-			name: 'Каловые массы',
-			price: 1000,
-			img: img1,
-			typeName: 'type',
-			brandName: 'brand',
-		},
-		{
-			id: 3,
-			name: 'Каловые массы',
-			price: 1000,
-			img: img1,
-			typeName: 'type',
-			brandName: 'brand',
-		},
-	];
+	const [products, setProducts] = useState([])
+
+	useEffect(()=>{
+		fetch('http://localhost:5000/api/product')
+			.then(res => res.json())
+			.then(data => setProducts(data.rows))
+			.then(data => console.log('Запрос'))
+	})
+
 	return (
 		<div className="catalogue-page">
 			<div className="products-container">

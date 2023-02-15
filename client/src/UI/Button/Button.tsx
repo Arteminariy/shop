@@ -3,12 +3,12 @@ import './Button.css';
 
 export interface IButtonProps {
     children: JSX.Element | JSX.Element[] | string;
-    variant: ButtonStyleVariant;
+    variant?: ButtonStyleVariant;
     click?: () => void;
 }
 export type ButtonStyleVariant = 'filled' | 'outlined';
 
-const Button: FC<IButtonProps> = ({ children, variant, click }) => (
+const Button: FC<IButtonProps> = ({ children, variant = 'filled', click }) => (
 	<button
 		onClick={click}
 		className={
