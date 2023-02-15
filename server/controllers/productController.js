@@ -113,17 +113,17 @@ class productController {
 			const { id } = req.params;
 			const product = await Product.findOne({ where: { id: id } });
 			if (product && name && price && brandId && typeId && description) {
-				await Product.update(
+				const product = await Product.update(
 					{ name, price, brandId, typeId, description },
 					{ where: { id: id } }
 				);
-				return res.json({ message: 'Товар(♿️) изменён' });
+				return res.json(product);
 			}
 			if (!product) {
-				return next(ApiError.badRequest(error.message));
+				return next(ApiError.badRequest('Неправильный ввод'));
 			}
 			if (!(name && price && brandId && typeId && description)) {
-				return next(ApiError.badRequest(error.message));
+				return next(ApiError.badRequest('Неправильный ввод'));
 			}
 		} catch (error) {
 			next(ApiError.internal(error.message));
