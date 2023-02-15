@@ -8,10 +8,10 @@ const CataloguePage: FC<ICataloguePageProps> = () => {
 	const [products, setProducts] = useState([])
 
 	useEffect(()=>{
-		fetch('http://localhost:5000/api/product')
+		fetch(`${process.env.REACT_APP_API_URL}/api/product`)
 			.then(res => res.json())
 			.then(data => setProducts(data.rows))
-	})
+	}, [])
 
 	return (
 		<div className="catalogue-page">

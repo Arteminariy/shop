@@ -13,16 +13,22 @@ const ProductPage: FC<IProductPageProps> = () => {
 		name: 'name',
 		price: 1000,
 		img: img1,
-		typeName: '',
-		brandName: '',
+		type: {
+			name: ''
+		},
+		brand: {
+			name: ''
+		},
 		description: '',
 	});
+
 
 	useEffect(() => {
 		fetch(`http://localhost:5000/api/product/${id}`)
 			.then((res) => res.json())
 			.then((data) => setProduct(data))
 	}, [id]);
+
 	return (
 		<div className="product-page">
 			{product && (
@@ -33,8 +39,8 @@ const ProductPage: FC<IProductPageProps> = () => {
 						</div>
 						<div className="product-content-text">
 							<h2 className="product-name">{product.name}</h2>
-							<p className="product-brand">{product.brandName}</p>
-							<p className="product-type">{product.typeName}</p>
+							<p className="product-brand">{product.brand.name}</p>
+							<p className="product-type">{product.type.name}</p>
 							<p className="product-article">
 								Артикул: {product.id}
 							</p>
