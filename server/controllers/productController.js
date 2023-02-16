@@ -145,6 +145,20 @@ class productController {
 			next(ApiError.internal(error.message));
 		}
 	}
+	async addDescription(req, res, next) {
+		try {
+			const { id } = req.params;
+			const { title, text } = req.body;
+			const product_description = await ProductDescription.create({
+				title,
+				description: text,
+				productId: id
+			})
+			res.json(product_description)
+		} catch (error) {
+			next(ApiError.internal(error.message));
+		}
+	}
 }
 
 module.exports = new productController();
