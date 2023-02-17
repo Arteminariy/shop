@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import './MainPage.css';
 import Card from '../../UI/Card/Card';
 import Picture from '../../UI/Picture/Picture';
-import Button from '../../UI/Button/Button';
 import Contacts from '../../components/Contacts/Contacts';
 import ScrollUpButton from '../../UI/ScrollUpButton/ScrollUpButton';
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
@@ -26,10 +25,7 @@ const MainPage: FC<IMainPageProps> = ({}) => {
 					width={300}
 				/>
 				<p>Залупа</p>
-				<Button variant="outlined">Что-то</Button>
 			</Card>
-			{/*КНОПКА*/}
-			<Button variant="outlined">Some text</Button>
 			{/*КОНТАКТЫ*/}
 			<Contacts>Contact us!</Contacts>
 			<RegistrationForm />

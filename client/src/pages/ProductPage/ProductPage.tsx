@@ -1,9 +1,10 @@
 import React, { FC, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductPage.css';
+import '../../UI/Button/Button.css'
 import img1 from '../../pictures/1.jpg';
-import Button from '../../UI/Button/Button';
 import Picture from '../../UI/Picture/Picture';
+import addToBasket from '../../http/addToBasket';
 
 export interface IProductPageProps {}
 
@@ -58,7 +59,7 @@ const ProductPage: FC<IProductPageProps> = () => {
 							</p>
 							<p className="product-price">{product.price}₽</p>
 							<div className="btn-container">
-								<Button variant="filled">В корзину</Button>
+								<button className="button filled-btn" onClick={(e: any) => addToBasket(1, 1)}>В корзину</button>
 							</div>
 						</div>
 					</div>

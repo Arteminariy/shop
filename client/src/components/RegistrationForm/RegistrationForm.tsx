@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import Button from '../../UI/Button/Button';
 import Input from '../../UI/Input/Input';
 import './RegistrationForm.css';
 
@@ -13,7 +12,8 @@ const RegistrationForm: FC<IRegistrationFormProps> = ({}) => {
 		<div className="registration-form">
 			<Input placeholder="Login"></Input>
 			<Input placeholder="Password" type="password"></Input>
-			<Button variant="outlined">Войти</Button>
+			
+			<button className="button filled-btn">Войти</button>
 		</div>
 	)
 };

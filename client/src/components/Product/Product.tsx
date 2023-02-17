@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../../UI/Button/Button';
 import Picture from '../../UI/Picture/Picture';
 import './Product.css';
+import addToBasket from '../../http/addToBasket';
 
 export interface IProductProps {
 	product: IProduct;
@@ -25,7 +25,6 @@ export interface IProduct {
 }
 
 const Product: FC<IProductProps> = ({ product }) => {
-	
 	return (
 		<div className="product-card-container">
 			{/* <div className="product-card-img">
@@ -46,7 +45,12 @@ const Product: FC<IProductProps> = ({ product }) => {
 				<p className="product-card-name">{product.name}</p>
 				<p className="product-card-price">{product.price}₽</p>
 			</Link>
-			<Button variant="filled">В корзину</Button>
+			<button
+				className="button filled-btn"
+				onClick={(e: any) => addToBasket(1, 2)}
+			>
+				В корзину
+			</button>
 		</div>
 	);
 };
