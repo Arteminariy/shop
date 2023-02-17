@@ -15,19 +15,23 @@ const ProductPage: FC<IProductPageProps> = () => {
 		price: 1000,
 		img: img1,
 		type: {
-			name: ''
+			name: '',
 		},
 		brand: {
-			name: ''
+			name: '',
 		},
-		description: '',
+		description: [
+			{
+				title: '',
+				description: '',
+			},
+		],
 	});
-
 
 	useEffect(() => {
 		fetch(`http://localhost:5000/api/product/${id}`)
 			.then((res) => res.json())
-			.then((data) => setProduct(data))
+			.then((data) => setProduct(data));
 	}, [id]);
 
 	return (
@@ -38,10 +42,16 @@ const ProductPage: FC<IProductPageProps> = () => {
 						{/* <div className="product-image">
 							<img src={`${process.env.REACT_APP_API_URL}/${product.img}`} alt={product.name} />
 						</div> */}
-						<Picture width={400} height={400} link={`${process.env.REACT_APP_API_URL}/${product.img}`}/>
+						<Picture
+							width={400}
+							height={400}
+							link={`${process.env.REACT_APP_API_URL}/${product.img}`}
+						/>
 						<div className="product-content-text">
 							<h2 className="product-name">{product.name}</h2>
-							<p className="product-brand">{product.brand.name}</p>
+							<p className="product-brand">
+								{product.brand.name}
+							</p>
 							<p className="product-type">{product.type.name}</p>
 							<p className="product-article">
 								Артикул: {product.id}
@@ -53,10 +63,41 @@ const ProductPage: FC<IProductPageProps> = () => {
 						</div>
 					</div>
 					<div className="product-description">
-						<h3 className="product-description">Описание</h3>
-						<p className="product-description-text">
-							{product.description}
-						</p>
+						{product.description.length > 0 && (
+							<>
+								{product.description.map((desc) => {
+									if (desc.title === 'description-text') {
+										return (
+											<>
+												<h3 className="product-description">
+													Описание
+												</h3>
+												<p className="product-description-text">
+													{desc.description}
+												</p>
+											</>
+										);
+									}
+								})}
+								<h3 className="product-description">
+									Характеристики
+								</h3>
+								{product.description.map((desc) => {
+									if (desc.title !== 'description-text') {
+										return (
+											<div className="product-description-row">
+												<p className="product-description-title">
+													{desc.title}
+												</p>
+												<p className="product-description-text">
+													{desc.description}
+												</p>
+											</div>
+										);
+									}
+								})}
+							</>
+						)}
 					</div>
 				</>
 			)}

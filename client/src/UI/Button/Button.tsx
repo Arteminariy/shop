@@ -4,7 +4,7 @@ import './Button.css';
 export interface IButtonProps {
     children: JSX.Element | JSX.Element[] | string;
     variant?: ButtonStyleVariant;
-    click?: () => void;
+    click?: (() => void);
 }
 export type ButtonStyleVariant = 'filled' | 'outlined';
 

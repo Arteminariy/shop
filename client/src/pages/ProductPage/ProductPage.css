@@ -1,9 +1,11 @@
 .product-page {
+	
 }
 
 .product-content {
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 10px;
 }
 
 .product-content-text {
@@ -62,4 +64,14 @@
 
 .btn-container {
     margin-top: auto;
+}
+
+.product-description-row {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.product-description-row > *{
+	width: 50%;
 }
