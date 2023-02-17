@@ -1,5 +1,4 @@
 .product-page {
-	
 }
 
 .product-content {
@@ -12,9 +11,9 @@
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-    align-items: flex-start;
+	align-items: flex-start;
 	width: 600px;
-    padding: 0 10px;
+	padding: 0 10px;
 }
 
 .product-name {
@@ -35,7 +34,7 @@
 	font-weight: 400;
 	line-height: 100%;
 	letter-spacing: 0.02em;
-    margin: 5px 0;
+	margin: 5px 0;
 }
 
 .product-brand,
@@ -50,7 +49,7 @@
 
 .product-price {
 	font-size: 50px;
-    margin: 0;
+	margin: 0;
 }
 
 .product-image {
@@ -63,7 +62,22 @@
 }
 
 .btn-container {
-    margin-top: auto;
+	margin-top: auto;
+}
+
+.product-description {
+	font-family: 'Neutral Face';
+	font-weight: 400;
+}
+
+.product-description-text {
+	font-size: 16px;
+	text-align: start;
+}
+
+.product-description-title {
+	font-size: 24px;
+	text-align: start;
 }
 
 .product-description-row {
@@ -72,6 +86,6 @@
 	flex-direction: row;
 }
 
-.product-description-row > *{
+.product-description-row > * {
 	width: 50%;
 }

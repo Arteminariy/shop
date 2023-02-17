@@ -69,7 +69,7 @@ const ProductPage: FC<IProductPageProps> = () => {
 									if (desc.title === 'description-text') {
 										return (
 											<>
-												<h3 className="product-description">
+												<h3 className="product-description-title">
 													Описание
 												</h3>
 												<p className="product-description-text">
@@ -80,14 +80,14 @@ const ProductPage: FC<IProductPageProps> = () => {
 									}
 									return ''
 								})}
-								<h3 className="product-description">
+								<h3 className="product-description-title">
 									Характеристики
 								</h3>
 								{product.description.map((desc) => {
 									if (desc.title !== 'description-text') {
 										return (
 											<div className="product-description-row">
-												<p className="product-description-title">
+												<p className="product-description-text">
 													{desc.title}
 												</p>
 												<p className="product-description-text">
