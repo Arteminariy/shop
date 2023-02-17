@@ -78,6 +78,7 @@ const ProductPage: FC<IProductPageProps> = () => {
 											</>
 										);
 									}
+									return ''
 								})}
 								<h3 className="product-description">
 									Характеристики
@@ -95,6 +96,7 @@ const ProductPage: FC<IProductPageProps> = () => {
 											</div>
 										);
 									}
+									return ''
 								})}
 							</>
 						)}
