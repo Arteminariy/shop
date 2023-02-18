@@ -1,4 +1,5 @@
 server/node_modules/
 server/.env
 server/static/
+server/shop.postman_collection.json
 client/node_modules/
