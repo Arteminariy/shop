@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import './Header.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import user_icon from '../../assets/User_Empty.png';
 
 export interface IHeaderProps {
@@ -20,7 +20,7 @@ const Header: FC<IHeaderProps> = ({ tabs }) => {
 				<div className="header-top">
 					<div className="header-logo">Shine Bright</div>
 					<div className="header-buttons">
-						{ authorized ? <NavLink to="/"><div className="header-icon"><img src={user_icon} alt="Профиль" /></div></NavLink> : <></>}
+						{ authorized ? <Link to="user"><div className="header-icon"><img src={user_icon} alt="Профиль" /></div></Link> : <></>}
 					</div>
 				</div>
 				<div className="header-tabs">

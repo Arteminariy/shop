@@ -4,25 +4,11 @@ import Picture from '../../UI/Picture/Picture';
 import './Product.css';
 import addToBasket from '../../http/addToBasket';
 import Button from '../../UI/Button/Button';
+import type IProduct from '../../../types/IProduct'
+
 
 export interface IProductProps {
 	product: IProduct;
-}
-
-export interface IProduct {
-	id: number;
-	name: string;
-	price: number;
-	img: string;
-	type: {
-		id: number;
-		name: string;
-	};
-	brand: {
-		id: number;
-		name: string;
-	};
-	description: string;
 }
 
 const Product: FC<IProductProps> = ({ product }) => {

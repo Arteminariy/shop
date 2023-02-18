@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import CataloguePage from './pages/CataloguePage/CataloguePage';
 import ProductPage from './pages/ProductPage/ProductPage';
+import UserPage from './pages/UserPage/UserPage';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 					<Route path="catalogue" element={<CataloguePage />} />
 					<Route path="catalogue/:id" element={<ProductPage />} />
 					{/* <Route path='*' element={<NotFoundPage/>}/> */}
+					<Route path="user" element={<UserPage />} />
 				</Route>
 			</Routes>
 		</div>
