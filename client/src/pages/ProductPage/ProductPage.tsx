@@ -59,7 +59,7 @@ const ProductPage: FC<IProductPageProps> = () => {
 							</p>
 							<p className="product-price">{product.price}₽</p>
 							<div className="btn-container">
-								<Button onClick={() => addToBasket(1, 1)} color="secondary" variant="outlined">
+								<Button onClick={() => addToBasket(1, 1)} color="secondary" variant="filled">
 									В корзину
 								</Button>
 							</div>
