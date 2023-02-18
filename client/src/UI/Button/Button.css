@@ -1,31 +1,10 @@
 .button {
     width: fit-content;
     font-size: 30px;
-    border: 1px solid #000;
     box-sizing: border-box;
     text-align: center;
     padding: 5px 10px;
 }
-.outlined-btn {
-    color: #000;
-    background-color: #fff;
-}
-.filled-btn {
-    color: #fff;
-    background-color: #000;
-}
 .button:hover {
     cursor: pointer;
-}
-.outlined-btn:hover, .outlined-btn:active {
-    transition: 300ms ease-in-out;
-}
-.outlined-btn:hover {
-    color: #fff;
-    background-color: #000;
-}
-.outlined-btn:active {
-    color: #fff;
-    background-color: #444;
-    border: 1px solid #444;
 }

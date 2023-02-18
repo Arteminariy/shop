@@ -6,8 +6,8 @@ export const addToBasket = (basketId: number, productId: number) => {
 			productId,
 		})
 		.then((response) => {
-			//eslint-disable no-console
-			console.log(response.data);
+			// eslint-disable no-console
+			// console.log(response.data);
 		});
 	// console.log('click')
 };
