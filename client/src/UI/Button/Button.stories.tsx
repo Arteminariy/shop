@@ -17,5 +17,5 @@ export const Default = Template.bind({});
 Default.args = {
 	variant: 'outlined',
 	children: 'Default text',
-	click: alert,
+	onClick: alert,
 };

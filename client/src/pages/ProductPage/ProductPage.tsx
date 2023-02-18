@@ -5,6 +5,7 @@ import '../../UI/Button/Button.css'
 import img1 from '../../pictures/1.jpg';
 import Picture from '../../UI/Picture/Picture';
 import addToBasket from '../../http/addToBasket';
+import Button from '../../UI/Button/Button';
 
 export interface IProductPageProps {}
 
@@ -59,7 +60,8 @@ const ProductPage: FC<IProductPageProps> = () => {
 							</p>
 							<p className="product-price">{product.price}₽</p>
 							<div className="btn-container">
-								<button className="button filled-btn" onClick={(e: any) => addToBasket(1, 1)}>В корзину</button>
+								{/* <button className="button filled-btn" onClick={() => addToBasket(1, 1)}>В корзину</button> */}
+								<Button onClick={() => addToBasket(1, 1)}>В корзину</Button>
 							</div>
 						</div>
 					</div>
