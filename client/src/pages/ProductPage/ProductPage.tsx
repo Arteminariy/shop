@@ -5,8 +5,9 @@ import img1 from '../../pictures/1.jpg';
 import Picture from '../../UI/Picture/Picture';
 import { addToBasket } from '../../http/addToBasket';
 import Button from '../../UI/Button/Button';
+import Product from '../../components/Product/Product';
 
-export interface IProductPageProps {}
+export interface IProductPageProps { }
 
 const ProductPage: FC<IProductPageProps> = () => {
 	const { id } = useParams();
@@ -15,6 +16,8 @@ const ProductPage: FC<IProductPageProps> = () => {
 		name: 'name',
 		price: 1000,
 		img: img1,
+		typeId: 1,
+		brandId: 1,
 		type: {
 			name: '',
 		},
@@ -40,14 +43,14 @@ const ProductPage: FC<IProductPageProps> = () => {
 			{product && (
 				<>
 					<div className="product-content">
-						{/* <div className="product-image">
+						<div className="product-image">
 							<img src={`${process.env.REACT_APP_API_URL}/${product.img}`} alt={product.name} />
-						</div> */}
-						<Picture
-							width={400}
+						</div>
+						{/* <Picture
+							width={600}
 							height={400}
 							link={`${process.env.REACT_APP_API_URL}/${product.img}`}
-						/>
+						/> */}
 						<div className="product-content-text">
 							<h2 className="product-name">{product.name}</h2>
 							<p className="product-brand">
@@ -72,7 +75,7 @@ const ProductPage: FC<IProductPageProps> = () => {
 									if (desc.title === 'description-text') {
 										return (
 											<>
-												<h3 className="product-description-title">
+												<h3 className="product-global-description-title">
 													Описание
 												</h3>
 												<p className="product-description-text">
@@ -84,7 +87,7 @@ const ProductPage: FC<IProductPageProps> = () => {
 									return '';
 								})}
 								<h3 className="product-description-title">
-									Характеристики
+									Подробные характеристики
 								</h3>
 								{product.description.map((desc) => {
 									if (desc.title !== 'description-text') {
@@ -103,6 +106,12 @@ const ProductPage: FC<IProductPageProps> = () => {
 								})}
 							</>
 						)}
+					</div>
+					<div className="recomendations-container">
+						<h3 className="product-global-description-title">
+							Бестселлеры
+						</h3>
+						{/* <Product product={}/> x3  Сортируешь по популярности (в бэк заносишь данные о каждой покупке и сортируешь по кол-ву покупок). Берешь топ 3*/}
 					</div>
 				</>
 			)}
