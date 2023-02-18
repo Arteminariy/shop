@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Picture from '../../UI/Picture/Picture';
 import './Product.css';
 import addToBasket from '../../http/addToBasket';
+import Button from '../../UI/Button/Button';
 
 export interface IProductProps {
 	product: IProduct;
@@ -45,12 +46,7 @@ const Product: FC<IProductProps> = ({ product }) => {
 				<p className="product-card-name">{product.name}</p>
 				<p className="product-card-price">{product.price}₽</p>
 			</Link>
-			<button
-				className="button filled-btn"
-				onClick={(e: any) => addToBasket(1, 2)}
-			>
-				В корзину
-			</button>
+			<Button onClick={() => addToBasket(1, product.id)}>В корзину</Button>
 		</div>
 	);
 };
