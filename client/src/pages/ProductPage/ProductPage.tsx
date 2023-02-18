@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import './ProductPage.css';
 import img1 from '../../pictures/1.jpg';
 import Picture from '../../UI/Picture/Picture';
-import addToBasket from '../../http/addToBasket';
+import { addToBasket } from '../../http/addToBasket';
 import Button from '../../UI/Button/Button';
 
 export interface IProductPageProps {}
@@ -59,7 +59,9 @@ const ProductPage: FC<IProductPageProps> = () => {
 							</p>
 							<p className="product-price">{product.price}₽</p>
 							<div className="btn-container">
-								<Button onClick={() => addToBasket(1, 1)}>В корзину</Button>
+								<Button onClick={() => addToBasket(1, 1)}>
+									В корзину
+								</Button>
 							</div>
 						</div>
 					</div>
@@ -79,7 +81,7 @@ const ProductPage: FC<IProductPageProps> = () => {
 											</>
 										);
 									}
-									return ''
+									return '';
 								})}
 								<h3 className="product-description-title">
 									Характеристики
@@ -97,7 +99,7 @@ const ProductPage: FC<IProductPageProps> = () => {
 											</div>
 										);
 									}
-									return ''
+									return '';
 								})}
 							</>
 						)}

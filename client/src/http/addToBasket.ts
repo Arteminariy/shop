@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const addToBasket = (basketId: number, productId: number) => {
+export const addToBasket = (basketId: number, productId: number) => {
 	axios
 		.post(`${process.env.REACT_APP_API_URL}/api/basket/${basketId}`, {
 			productId,
@@ -12,4 +12,4 @@ const addToBasket = (basketId: number, productId: number) => {
 	// console.log('click')
 };
 
-export default addToBasket;
+
