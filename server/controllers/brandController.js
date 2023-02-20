@@ -1,6 +1,6 @@
 const { Brand } = require('../models/models');
 const ApiError = require('../error/ApiError');
-class brandController {
+class BrandController {
 	async create(req, res, next) {
 		try {
 			const { name } = req.body;
@@ -67,4 +67,4 @@ class brandController {
 	}
 }
 
-module.exports = new brandController();
+module.exports = new BrandController();
