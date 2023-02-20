@@ -41,71 +41,79 @@ class productController {
 		}
 	}
 	async getAll(req, res) {
-		let { brandId, typeId, limit, page } = req.query;
-		page = page || 1;
-		limit = limit || 10;
-		let offset = page * limit - limit;
-		let products;
-		if (!brandId && !typeId) {
-			products = await Product.findAndCountAll({
-				limit,
-				offset,
-				include: [
-					{ model: ProductDescription, as: 'description' },
-					{ model: Brand, as: 'brand' },
-					{ model: Type, as: 'type' },
-				],
-			});
+		try {
+			let { brandId, typeId, limit, page } = req.query;
+			page = page || 1;
+			limit = limit || 10;
+			let offset = page * limit - limit;
+			let products;
+			if (!brandId && !typeId) {
+				products = await Product.findAndCountAll({
+					limit,
+					offset,
+					include: [
+						{ model: ProductDescription, as: 'description' },
+						{ model: Brand, as: 'brand' },
+						{ model: Type, as: 'type' },
+					],
+				});
+			}
+			if (brandId && !typeId) {
+				products = await Product.findAndCountAll({
+					where: { brandId },
+					limit,
+					offset,
+					include: [
+						{ model: ProductDescription, as: 'description' },
+						{ model: Brand, as: 'brand' },
+						{ model: Type, as: 'type' },
+					],
+				});
+			}
+			if (!brandId && typeId) {
+				products = await Product.findAndCountAll({
+					where: { typeId },
+					limit,
+					offset,
+					include: [
+						{ model: ProductDescription, as: 'description' },
+						{ model: Brand, as: 'brand' },
+						{ model: Type, as: 'type' },
+					],
+				});
+			}
+			if (brandId && typeId) {
+				products = await Product.findAndCountAll({
+					where: { brandId, typeId },
+					limit,
+					offset,
+					include: [
+						{ model: ProductDescription, as: 'description' },
+						{ model: Brand, as: 'brand' },
+						{ model: Type, as: 'type' },
+					],
+				});
+			}
+			return res.json(products);
+		} catch (error) {
+			next(ApiError.internal(error.message));
 		}
-		if (brandId && !typeId) {
-			products = await Product.findAndCountAll({
-				where: { brandId },
-				limit,
-				offset,
-				include: [
-					{ model: ProductDescription, as: 'description' },
-					{ model: Brand, as: 'brand' },
-					{ model: Type, as: 'type' },
-				],
-			});
-		}
-		if (!brandId && typeId) {
-			products = await Product.findAndCountAll({
-				where: { typeId },
-				limit,
-				offset,
-				include: [
-					{ model: ProductDescription, as: 'description' },
-					{ model: Brand, as: 'brand' },
-					{ model: Type, as: 'type' },
-				],
-			});
-		}
-		if (brandId && typeId) {
-			products = await Product.findAndCountAll({
-				where: { brandId, typeId },
-				limit,
-				offset,
-				include: [
-					{ model: ProductDescription, as: 'description' },
-					{ model: Brand, as: 'brand' },
-					{ model: Type, as: 'type' },
-				],
-			});
-		}
-		return res.json(products);
 	}
 	async getOne(req, res) {
-		const { id } = req.params;
-		const product = await Product.findOne({
-			where: { id },
-			include: [
-				{ model: ProductDescription, as: 'description' },
-				{ model: Brand, as: 'brand' },
-				{ model: Type, as: 'type' },
-			],
-		});
-		return res.json(product);
+		try {
+			const { id } = req.params;
+			const product = await Product.findOne({
+				where: { id },
+				include: [
+					{ model: ProductDescription, as: 'description' },
+					{ model: Brand, as: 'brand' },
+					{ model: Type, as: 'type' },
+				],
+			});
+			return res.json(product);
+		} catch (error) {
+			next(ApiError.internal(error.message));
+		}
 	}
 	async update(req, res, next) {
 		try {
@@ -152,9 +160,9 @@ class productController {
 			const product_description = await ProductDescription.create({
 				title,
 				description: text,
-				productId: id
-			})
-			res.json(product_description)
+				productId: id,
+			});
+			res.json(product_description);
 		} catch (error) {
 			next(ApiError.internal(error.message));
 		}
