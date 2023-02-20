@@ -128,7 +128,7 @@ class productController {
 				return res.json(product);
 			}
 			if (!product) {
-				return next(ApiError.badRequest('Неправильный ввод'));
+				return next(ApiError.notFound('Не существует такого товара'));
 			}
 			if (!(name && price && brandId && typeId && description)) {
 				return next(ApiError.badRequest('Неправильный ввод'));
@@ -143,11 +143,9 @@ class productController {
 			const product = await Product.findOne({ where: { id: id } });
 			if (product) {
 				await Product.destroy({ where: { id: id } });
-				res.json({
-					message: `Уволен ♿️ с id:${id}`,
-				});
+				return res.json({ message: `Уволен ♿️ с id: ${id}` });
 			} else {
-				next(ApiError.notFound(error.message));
+				next(ApiError.notFound('Не существует такого товара'));
 			}
 		} catch (error) {
 			next(ApiError.internal(error.message));
