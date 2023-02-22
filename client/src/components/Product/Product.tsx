@@ -29,7 +29,7 @@ const Product: FC<IProductProps> = ({ product }) => {
 					{product.brand.name}
 				</h3>
 				<p className="product-card-name">{product.name}</p>
-				<p className="product-card-price">{product.price}₽</p>
+				<p className="product-card-price">{product.price} ₽</p>
 			</Link>
 			<Button onClick={() => addToBasket(1, product.id)}>
 				В корзину

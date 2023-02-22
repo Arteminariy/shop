@@ -7,11 +7,11 @@ import {
 	WhatsAppOutlined,
 	MailOutlined,
 	MailFilled
-} from '@ant-design/icons'
+} from '@ant-design/icons';
 import './Contacts.css';
 
 export interface IContactsProps {
-    children: JSX.Element | JSX.Element[] | string,
+	children: JSX.Element | JSX.Element[] | string,
 }
 
 const Contacts: FC<IContactsProps> = ({ children }) => (
