@@ -107,7 +107,7 @@ const ProductPage: FC<IProductPageProps> = () => {
 							</>
 						)}
 					</div>
-					<div className="recomendations-container">
+					<div className="recommendations-container">
 						<h3 className="product-global-description-title">
 							Бестселлеры
 						</h3>
