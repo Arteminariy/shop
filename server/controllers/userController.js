@@ -6,6 +6,8 @@ const {
 	Order,
 	BasketProduct,
 	OrderProduct,
+	Favorite,
+	FavoriteProduct,
 } = require('../models/models');
 const jwt = require('jsonwebtoken');
 
@@ -39,6 +41,7 @@ class userController {
 				password: hashPassword,
 			});
 			const basket = await Basket.create({ userId: user.id });
+			const favorite = await Favorite.create({ userId: user.id });
 			const token = generateJWT(user.id, user.login, user.role);
 			return res.json({ token });
 		} catch (error) {
@@ -80,6 +83,7 @@ class userController {
 				include: [
 					{ model: Basket, include: { model: BasketProduct } },
 					{ model: Order, include: { model: OrderProduct } },
+					{ model: Favorite, include: { model: FavoriteProduct } },
 				],
 			});
 			return res.json({ user });

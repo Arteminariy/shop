@@ -76,7 +76,10 @@ class OrderController {
             const { userId } = req.body;
             const { user } = req;
 
-            if (user.id === order.userId) {
+            console.log(userId);
+            console.log(user.id);
+
+            if (user.id === userId) {
                 const order = await Order.create({ userId: userId });
                 return res.status(200).json(order);
             } else next(ApiError.forbidden(`Не свою коляску катишь, ♿️`));
