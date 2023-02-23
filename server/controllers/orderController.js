@@ -76,9 +76,6 @@ class OrderController {
             const { userId } = req.body;
             const { user } = req;
 
-            console.log(userId);
-            console.log(user.id);
-
             if (user.id === userId) {
                 const order = await Order.create({ userId: userId });
                 return res.status(200).json(order);
