@@ -3,53 +3,69 @@ header {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    margin-top: 12px;
+    background: #000;
 }
+
+.header-logo,
+.header-icon,
+.header-tab {
+    color: #fff;
+}
+
 .header-content {
     width: 100%;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
 }
+
 .header-top {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
 }
+
 .header-logo {
-    font-family: 'Yeseva One';
+    margin-top: 15px;
+    font-family: 'NeutralFace';
     font-size: 50px;
     user-select: none;
-    color: #000;
     text-decoration: none;
 }
+
 .header-buttons {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
+
 .header-icon {
-    width: 24px;
-    height: 24px;
-    color: #000;
+    font-size: xx-large;
+    margin-left: 20px
 }
+
 .header-tabs {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
 .header-tab {
     padding: 10px;
     font-size: 24px;
     text-decoration: none;
-    color: #000;
 }
 
 .header-tab:hover {
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
+    color: #f4f4f4;
+    font-weight: 600;
 }
 
 .active {
-    background-color: #dcdcdc;
+    /* background-color: #dcdcdc; */
+    /* color: #dcdcdc; */
+    font-weight: 600;
+    color: #f5f5f5;
 }

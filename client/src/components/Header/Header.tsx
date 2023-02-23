@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 import './Header.css';
 import { NavLink, Link } from 'react-router-dom';
-import user_icon from '../../assets/User_Empty.png';
+import { UserOutlined, ShoppingOutlined } from '@ant-design/icons'
 
 export interface IHeaderProps {
-    tabs: IHeaderTab[];
+	tabs: IHeaderTab[];
 }
 
 export interface IHeaderTab {
-    title: string;
-    link: string;
+	title: string;
+	link: string;
 }
 
 const Header: FC<IHeaderProps> = ({ tabs }) => {
@@ -20,7 +20,11 @@ const Header: FC<IHeaderProps> = ({ tabs }) => {
 				<div className="header-top">
 					<div className="header-logo">Shine Bright</div>
 					<div className="header-buttons">
-						{ authorized ? <Link to="user"><div className="header-icon"><img src={user_icon} alt="Профиль" /></div></Link> : <></>}
+						{authorized ?
+							<>
+								<Link to="user"><UserOutlined className="header-icon" /></Link>
+								<Link to="user"><ShoppingOutlined className="header-icon" /></Link>
+							</> : <></>}
 					</div>
 				</div>
 				<div className="header-tabs">
