@@ -1,4 +1,6 @@
 import React, { FC } from 'react';
+import { useLocation } from 'react-router-dom';
+import { registration } from '../../http/userAPI';
 import './UserPage.css';
 
 export interface IUserPageProps { }
@@ -6,13 +8,22 @@ export interface IUserPageProps { }
 // const userId = 1
 
 const UserPage: FC<IUserPageProps> = () => {
-	// const [user, setUser] = useState()
+
+	const location = useLocation()
+	// const isLogin = location.pathname
+	// const [user, setUser] = useState({})
 
 	// useEffect(()=>{
 	// 	fetch(`${process.env.REACT_APP_API_URL}/api/user/${userId}`)
 	// 		.then(res => res.json())
 	// 		.then(data => setUser(data))
 	// }, [])
+
+	// const click = async () => {
+	// 	if(isLogin)
+	// 	const res = await registration()
+	// 	console.log(res)
+	// }
 
 	return (
 		<div className="user-page">
