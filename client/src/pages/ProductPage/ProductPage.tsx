@@ -6,11 +6,13 @@ import Picture from '../../UI/Picture/Picture';
 import { addToBasket } from '../../http/addToBasket';
 import Button from '../../UI/Button/Button';
 import Product from '../../components/Product/Product';
+import ProductPageSkeleton from './ProductPageSkeleton';
 
 export interface IProductPageProps { }
 
 const ProductPage: FC<IProductPageProps> = () => {
 	const { id } = useParams();
+	const [isLoading, setIsLoading] = useState(true)
 	const [product, setProduct] = useState({
 		id: id,
 		name: 'name',
@@ -35,12 +37,15 @@ const ProductPage: FC<IProductPageProps> = () => {
 	useEffect(() => {
 		fetch(`http://localhost:5000/api/product/${id}`)
 			.then((res) => res.json())
-			.then((data) => setProduct(data));
+			.then((data) => {
+				setProduct(data)
+				setIsLoading(false)
+			});
 	}, [id]);
 
 	return (
 		<div className="product-page">
-			{product && (
+			{isLoading ? <ProductPageSkeleton/> : (
 				<>
 					<div className="product-content">
 						<div className="product-image">
