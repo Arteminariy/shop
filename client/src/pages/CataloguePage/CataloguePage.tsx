@@ -22,7 +22,7 @@ const CataloguePage: FC<ICataloguePageProps> = () => {
 		<div className="catalogue-page">
 			<div className="products-container">
 				{isLoading
-					? [...new Array(5)].map((_, i) => <ProductSkeleton key={i} />)
+					? [...new Array(4)].map((_, i) => <ProductSkeleton key={i} />)
 					: products.map((product) => <Product product={product} key={product} />)}
 			</div>
 		</div>
