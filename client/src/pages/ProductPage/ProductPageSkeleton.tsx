@@ -19,7 +19,7 @@ const ProductPageSkeleton: FC<IProductPageSkeleton> = ({}) => {
 			<rect x="650" y="120" rx="0" ry="0" width="500" height="45" />
 			<rect x="650" y="170" rx="0" ry="0" width="500" height="50" />
 			<rect x="650" y="220" rx="0" ry="0" width="500" height="80" />
-			<rect x="650" y="370" rx="0" ry="0" width="130" height="45" />
+			<rect x="650" y="455" rx="0" ry="0" width="130" height="45" />
 			<rect x="0" y="550" rx="0" ry="0" width="1200" height="45" />
 			<rect x="0" y="605" rx="0" ry="0" width="1200" height="70" />
 			<rect x="0" y="685" rx="0" ry="0" width="1200" height="35" />
