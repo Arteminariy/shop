@@ -4,10 +4,12 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import {publicRoutes, authRoutes} from './routes'
+import { useSelector } from 'react-redux';
+import { RootState } from './store';
 
 function App() {
 
-	const isAuth = true
+	const isAuth = useSelector((state: RootState) => state.user.isAuth)
 
 	return (
 		<div className="App">
