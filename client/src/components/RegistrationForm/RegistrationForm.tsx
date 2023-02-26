@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
-import Button from '../../UI/Button/Button';
-import Input from '../../UI/Input/Input';
+import {Button, Input} from '../../UI/';
 import './RegistrationForm.css';
 
 export interface IRegistrationFormProps {
@@ -8,7 +7,7 @@ export interface IRegistrationFormProps {
 }
 
 
-const RegistrationForm: FC<IRegistrationFormProps> = ({}) => {
+const RegistrationForm: FC<IRegistrationFormProps> = () => {
 	return (
 		<div className="registration-form">
 			<Input placeholder="Login"></Input>

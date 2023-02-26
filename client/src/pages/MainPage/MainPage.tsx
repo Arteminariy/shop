@@ -1,9 +1,7 @@
 import React, { FC } from 'react';
 import './MainPage.css';
-import Card from '../../UI/Card/Card';
-import Picture from '../../UI/Picture/Picture';
+import { Card, Picture, ScrollUpButton } from '../../UI/';
 import Contacts from '../../components/Contacts/Contacts';
-import ScrollUpButton from '../../UI/ScrollUpButton/ScrollUpButton';
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 
 export interface IMainPageProps {}

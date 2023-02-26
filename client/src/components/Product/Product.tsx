@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
-import Picture from '../../UI/Picture/Picture';
 import './Product.css';
 import { addToBasket } from '../../http/addToBasket';
-import Button from '../../UI/Button/Button';
+import {Button, Picture} from '../../UI/';
 import type IProduct from '../../../types/IProduct';
 
 export interface IProductProps {
