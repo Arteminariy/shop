@@ -1,11 +1,9 @@
 import React, { FC, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import IProduct from '../../../types/IProduct';
 import ProductLi from '../../components/ProductLi/ProductLi';
-import { registration } from '../../http/userAPI';
 import { RootState } from '../../store';
-import type { CartState } from '../../store/CartSlice';
 import './UserPage.css';
 
 export interface IUserPageProps {}
@@ -13,7 +11,7 @@ export interface IUserPageProps {}
 // const userId = 1
 
 const UserPage: FC<IUserPageProps> = () => {
-	const location = useLocation();
+	// const location = useLocation();
 	// const isLogin = location.pathname
 	// const [user, setUser] = useState({})
 
@@ -43,7 +41,7 @@ const UserPage: FC<IUserPageProps> = () => {
 					setBasket((prev) => [...prev, data]);
 				});
 		});
-	}, []);
+	}, [prodIds]);
 
 	return (
 		<div className="user-page">
