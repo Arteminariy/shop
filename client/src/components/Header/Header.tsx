@@ -13,6 +13,7 @@ export interface IHeaderTab {
 }
 
 const Header: FC<IHeaderProps> = ({ tabs }) => {
+
 	const authorized = true
 	return (
 		<header>

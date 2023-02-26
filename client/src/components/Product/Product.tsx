@@ -4,12 +4,17 @@ import './Product.css';
 import { addToBasket } from '../../http/addToBasket';
 import {Button, Picture} from '../../UI/';
 import type IProduct from '../../../types/IProduct';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../store/CartSlice';
 
 export interface IProductProps {
 	product: IProduct;
 }
 
 const Product: FC<IProductProps> = ({ product }) => {
+
+	const dispatch = useDispatch()
+
 	return (
 		<div className="product-card-container">
 			{/* <div className="product-card-img">
@@ -30,7 +35,10 @@ const Product: FC<IProductProps> = ({ product }) => {
 				<p className="product-card-name">{product.name}</p>
 				<p className="product-card-price">{product.price} ₽</p>
 			</Link>
-			<Button onClick={() => addToBasket(1, product.id)}>
+			<Button onClick={() => {
+				addToBasket(1, product.id)
+				dispatch(addToCart(product.id))
+			}}>
 				В корзину
 			</Button>
 		</div>
