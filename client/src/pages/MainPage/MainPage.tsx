@@ -26,7 +26,6 @@ const MainPage: FC<IMainPageProps> = ({}) => {
 			</Card>
 			{/*КОНТАКТЫ*/}
 			<Contacts>Contact us!</Contacts>
-			<RegistrationForm />
 			<ScrollUpButton />
 		</div>
 	);

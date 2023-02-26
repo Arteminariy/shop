@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import './Product.css';
 import { addToBasket } from '../../http/addToBasket';
-import {Button, Picture} from '../../UI/';
+import { Button, Picture } from '../../UI/';
 import type IProduct from '../../../types/IProduct';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../store/CartSlice';
@@ -12,8 +12,7 @@ export interface IProductProps {
 }
 
 const Product: FC<IProductProps> = ({ product }) => {
-
-	const dispatch = useDispatch()
+	const dispatch = useDispatch();
 
 	return (
 		<div className="product-card-container">
@@ -35,10 +34,12 @@ const Product: FC<IProductProps> = ({ product }) => {
 				<p className="product-card-name">{product.name}</p>
 				<p className="product-card-price">{product.price} ₽</p>
 			</Link>
-			<Button onClick={() => {
-				addToBasket(1, product.id)
-				dispatch(addToCart(product))
-			}}>
+			<Button
+				onClick={() => {
+					addToBasket(1, product.id);
+					dispatch(addToCart(product));
+				}}
+			>
 				В корзину
 			</Button>
 		</div>

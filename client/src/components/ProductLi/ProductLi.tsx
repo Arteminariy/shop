@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import IProduct from '../../../types/IProduct';
 import { Button, Picture } from '../../UI';
+import { CATALOGUE_ROUTE } from '../../utils/consts';
 import './ProductLi.css';
 
 export interface IProductLiProps {
@@ -12,7 +13,7 @@ const ProductLi: FC<IProductLiProps> = ({ product }) => {
 	return (
 		<div className="product-li-container">
 			<Link
-				to={`../catalogue/${String(product.id)}`}
+				to={`${CATALOGUE_ROUTE}/${String(product.id)}`}
 				style={{ textDecoration: 'none', color: '#000' }}
 			>
 				<Picture

@@ -1,1 +1,17 @@
 .auth-page {}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.auth-link {
+    padding: 10px 24px;
+    text-decoration: none;
+}
