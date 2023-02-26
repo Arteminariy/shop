@@ -18,7 +18,7 @@ const UserSlice = createSlice({
 		setIsAuth(state, action: PayloadAction<boolean>) {
 			state.isAuth = action.payload;
 		},
-		setUser(state, action: PayloadAction<IUser>) {
+		setUser(state, action: PayloadAction<IUser | null>) {
 			state.user = action.payload;
 		},
 	},

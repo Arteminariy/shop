@@ -20,7 +20,7 @@ const generateJWT = (id, login, role) => {
 class userController {
 	async registration(req, res, next) {
 		try {
-			const { login, password, role } = req.body;
+			const { login, password } = req.body;
 			if (!login || !password) {
 				return next(
 					ApiError.badRequest('Некорректный логин или пароль')
@@ -37,7 +37,7 @@ class userController {
 			const hashPassword = await bcrypt.hash(password, 5);
 			const user = await User.create({
 				login,
-				role,
+				role: 'USER',
 				password: hashPassword,
 			});
 			const basket = await Basket.create({ userId: user.id });
