@@ -37,7 +37,7 @@ const Product: FC<IProductProps> = ({ product }) => {
 			</Link>
 			<Button onClick={() => {
 				addToBasket(1, product.id)
-				dispatch(addToCart(product.id))
+				dispatch(addToCart(product))
 			}}>
 				В корзину
 			</Button>

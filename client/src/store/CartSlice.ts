@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import IProduct from '../../types/IProduct';
 
 export type CartState = {
 	prodIds: number[];
@@ -14,13 +15,14 @@ const CartSlice = createSlice({
 	name: 'cart',
 	initialState,
 	reducers: {
-		addToCart(state, action: PayloadAction<number>) {
-			state.prodIds.push(action.payload);
+		addToCart(state, action: PayloadAction<IProduct>) {
+			state.prodIds.push(action.payload.id);
+			state.totalPrice += action.payload.price;
 		},
 	},
 });
 
-export const selectCart = (state: CartState) => state.prodIds
+export const selectCart = (state: CartState) => state.prodIds;
 
 export const { addToCart } = CartSlice.actions;
 export default CartSlice.reducer;

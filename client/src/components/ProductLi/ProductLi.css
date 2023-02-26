@@ -1,0 +1,16 @@
+.product-li-container {
+    width: 800px;
+    margin-top: 10px;
+}
+.product-li-container > * {
+    /* width: 800px; */
+    display: flex;
+    flex-direction: row;
+}
+.product-text {
+    width: 680px;
+    height: 120px;
+}
+.product-li-price {
+    text-align: right;
+}
