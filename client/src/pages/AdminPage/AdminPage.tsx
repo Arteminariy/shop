@@ -6,7 +6,7 @@ export interface IAdminPageProps { }
 const AdminPage: FC<IAdminPageProps> = () => {
 	return (
 		<div className="admin-page">
-			AdminPage Component
+			
 		</div>
 	)
 };

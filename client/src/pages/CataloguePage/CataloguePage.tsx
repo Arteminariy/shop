@@ -1,11 +1,17 @@
 import { Select } from 'antd';
 import React, { FC, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Pages from '../../components/Pages/Pages';
 import Product from '../../components/Product/Product';
 import ProductSkeleton from '../../components/Product/ProductSkeleton';
 import { fetchBrands, fetchProducts, fetchTypes } from '../../http/productAPI';
 import { RootState } from '../../store';
-import { setBrands, setProducts, setTypes } from '../../store/ProductSlice';
+import {
+	setBrands,
+	setProducts,
+	setTotalCount,
+	setTypes,
+} from '../../store/ProductSlice';
 import './CataloguePage.css';
 
 export interface ICataloguePageProps {}
@@ -14,12 +20,17 @@ const CataloguePage: FC<ICataloguePageProps> = () => {
 	const [isLoading, setIsLoading] = useState(true);
 	const dispatch = useDispatch();
 
-	const { types, brands, products } = useSelector((state: RootState) => state.product);
+	const { types, brands, products } = useSelector(
+		(state: RootState) => state.product
+	);
 
 	useEffect(() => {
 		fetchTypes().then((data) => dispatch(setTypes(data)));
 		fetchBrands().then((data) => dispatch(setBrands(data)));
-		fetchProducts().then((data) => dispatch(setProducts(data.rows)));
+		fetchProducts().then((data) => {
+			dispatch(setProducts(data.rows));
+			dispatch(setTotalCount(data.count));
+		});
 		fetch(`${process.env.REACT_APP_API_URL}/api/product`)
 			.then((res) => res.json())
 			.then((data) => {
@@ -59,6 +70,7 @@ const CataloguePage: FC<ICataloguePageProps> = () => {
 						<Product product={product} key={i} />
 					  ))}
 			</div>
+			<Pages />
 		</div>
 	);
 };
