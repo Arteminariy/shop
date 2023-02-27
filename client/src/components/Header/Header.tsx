@@ -56,7 +56,7 @@ const Header: FC<IHeaderProps> = ({ tabs }) => {
 				<div className="header-tabs">
 					{tabs.map((tab) => {
 						return (
-							<NavLink to={tab.link} className="header-tab">
+							<NavLink key={tab.title} to={tab.link} className="header-tab">
 								{tab.title}
 							</NavLink>
 						);

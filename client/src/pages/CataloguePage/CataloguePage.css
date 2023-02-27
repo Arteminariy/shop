@@ -9,3 +9,8 @@
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
 }
+.sort-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+}

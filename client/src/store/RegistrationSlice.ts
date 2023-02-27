@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import RegistratioForm from '../components/RegistrationForm/RegistrationForm';
 
 type RegistrationFormState = {
     login: string,

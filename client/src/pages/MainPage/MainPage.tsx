@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import './MainPage.css';
 import { Card, Picture, ScrollUpButton } from '../../UI/';
 import Contacts from '../../components/Contacts/Contacts';
-import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 
 export interface IMainPageProps {}
 

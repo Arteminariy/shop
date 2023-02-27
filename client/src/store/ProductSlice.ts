@@ -16,22 +16,22 @@ const initialState: ProductState = {
 };
 
 const ProductSlice = createSlice({
-	name: 'cart',
+	name: 'product',
 	initialState,
 	reducers: {
 		setTypes(state, action: PayloadAction<IType[]>) {
-			state.types = [...state.types, ...action.payload];
+			state.types = [...action.payload];
 		},
 		setBrands(state, action: PayloadAction<IBrand[]>) {
-			state.brands = [...state.brands, ...action.payload];
+			state.brands = [...action.payload];
 		},
 		setProducts(state, action: PayloadAction<IProduct[]>) {
-			state.products = [...state.products, ...action.payload];
+			state.products = [...action.payload];
 		},
 	},
 });
 
 export const selectUser = (state: ProductState) => state;
 
-export const {} = ProductSlice.actions;
+export const { setTypes, setBrands, setProducts } = ProductSlice.actions;
 export default ProductSlice.reducer;
